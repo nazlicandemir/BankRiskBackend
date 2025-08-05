@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankRiskTrackingApi", "BankRiskTrackingApi.csproj", "{31827882-33FA-4B1F-8705-AC596998188C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankRiskTracking.Business", "..\BankRiskTracking.Business\BankRiskTracking.Business.csproj", "{28E667FB-5786-459A-B5C4-2BA813D480E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankRiskTracking.DataAccess", "..\BankRiskTracking.DataAccess\BankRiskTracking.DataAccess.csproj", "{7D2AB391-674A-477E-860E-2E3DA26BAB61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankRiskTracking.Entities", "..\BankRiskTracking.Entities\BankRiskTracking.Entities.csproj", "{E25CBC2E-19D6-40ED-B536-E68421CE35D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31827882-33FA-4B1F-8705-AC596998188C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31827882-33FA-4B1F-8705-AC596998188C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31827882-33FA-4B1F-8705-AC596998188C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31827882-33FA-4B1F-8705-AC596998188C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28E667FB-5786-459A-B5C4-2BA813D480E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28E667FB-5786-459A-B5C4-2BA813D480E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28E667FB-5786-459A-B5C4-2BA813D480E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28E667FB-5786-459A-B5C4-2BA813D480E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D2AB391-674A-477E-860E-2E3DA26BAB61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D2AB391-674A-477E-860E-2E3DA26BAB61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D2AB391-674A-477E-860E-2E3DA26BAB61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D2AB391-674A-477E-860E-2E3DA26BAB61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E25CBC2E-19D6-40ED-B536-E68421CE35D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E25CBC2E-19D6-40ED-B536-E68421CE35D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E25CBC2E-19D6-40ED-B536-E68421CE35D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E25CBC2E-19D6-40ED-B536-E68421CE35D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE55AC4A-9691-41BA-B495-AEC054C03F7F}
+	EndGlobalSection
+EndGlobal
