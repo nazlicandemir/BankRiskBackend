@@ -25,21 +25,18 @@ namespace BankRiskTracking.Business.Services
             {
                 if (customerNote == null)
                 {
-                    return (ResponseGeneric<CustomerNote>.Error("Müşteri bilgileri boş olmaz "));
+                    return (ResponseGeneric<CustomerNote>.Error("CustomerNote nesnesi boş olamaz."));
                 }
                 _CustomerNoteRepository.Create(customerNote);
-                return (ResponseGeneric<CustomerNote>.Success(customerNote, "Müşteri başarı ıle oluşturuldu"));
+                return (ResponseGeneric<CustomerNote>.Success(customerNote, "CustomerNote başarıyla oluşturuldu."));
             }
-            catch
+            catch (Exception ex)
             {
-                return (ResponseGeneric<CustomerNote>.Error("Müşteri bilgileri boş olmaz "));
+                return (ResponseGeneric<CustomerNote>.Error($"Create işlemi sırasında hata oluştu: {ex.Message}"));
             }
         }
 
-        public Task<IResponse<CustomerNote>> Create(Customer customer)
-        {
-            throw new NotImplementedException();
-        }
+       
 
         public Task<IResponse<CustomerNote>> Delete(int id)
         {
@@ -48,15 +45,15 @@ namespace BankRiskTracking.Business.Services
                 var CustomerNote = _CustomerNoteRepository.GetByIdAsync(id).Result;
                 if (CustomerNote == null)
                 {
-                    return Task.FromResult<IResponse<CustomerNote>>(ResponseGeneric<CustomerNote>.Error("Müşteri bulunamadı"));
+                    return Task.FromResult<IResponse<CustomerNote>>(ResponseGeneric<CustomerNote>.Error("Silinecek not bulunamadı."));
                 }
                 _CustomerNoteRepository.Delete(CustomerNote);
-                return Task.FromResult<IResponse<CustomerNote>>(ResponseGeneric<CustomerNote>.Success(CustomerNote, "Müşteri başarı ile silindi"));
+                return Task.FromResult<IResponse<CustomerNote>>(ResponseGeneric<CustomerNote>.Success(CustomerNote, "Not başarıyla silindi."));
                 // Delete çağrıldığı anda her koşulda başarılı diye mesaj dönüyoruz ama gerçekten başarılı mı
             }
-            catch
+            catch (Exception ex)
             {
-                return Task.FromResult<IResponse<CustomerNote>>(ResponseGeneric<CustomerNote>.Error("Müşteri bulunamadı"));
+                return Task.FromResult<IResponse<CustomerNote>>(ResponseGeneric<CustomerNote>.Error($"Delete işlemi sırasında hata oluştu: {ex.Message}"));
             }
         }
 
@@ -67,13 +64,13 @@ namespace BankRiskTracking.Business.Services
                 var CustomerNote = _CustomerNoteRepository.GetByIdAsync(id).Result;
                 if (CustomerNote == null)
                 {
-                    return ((ResponseGeneric<CustomerNote>.Success(null, "Müşteri bulunamadı")));
+                    return ((ResponseGeneric<CustomerNote>.Success(null, "Not bulunamadı.")));
                 }
-                return ResponseGeneric<CustomerNote>.Success(CustomerNote, "Müşteri başarıyla bulundu");
+                return ResponseGeneric<CustomerNote>.Success(CustomerNote, "Not başarıyla getirildi.");
             }
-            catch
+            catch (Exception ex)
             {
-                return ((ResponseGeneric<CustomerNote>.Success(null, "Müşteri bulunamadı")));
+                return ((ResponseGeneric<CustomerNote>.Success(null, $"GetById hatası: {ex.Message}")));
             }
         }
 
@@ -85,13 +82,13 @@ namespace BankRiskTracking.Business.Services
 
                 if (CustomerNotes == null)
                 {
-                    return ResponseGeneric<CustomerNote>.Error("Müşteri bulunamadı");
+                    return ResponseGeneric<CustomerNote>.Error("İsimle eşleşen not bulunamadı.");
                 }
-                return ResponseGeneric<CustomerNote>.Success(CustomerNotes, "Müşteri bulundu");
+                return ResponseGeneric<CustomerNote>.Success(CustomerNotes, "Not başarıyla getirildi.");
             }
-            catch
+            catch (Exception ex)
             {
-                return ResponseGeneric<CustomerNote>.Error("Müşteri bulunamadı");
+                return ResponseGeneric<CustomerNote>.Error($"GetByName hatası: {ex.Message}");
             }
 
         }
@@ -103,17 +100,17 @@ namespace BankRiskTracking.Business.Services
                 var CustomerNote = _CustomerNoteRepository.GetAll().ToList();
                 if (CustomerNote == null)
                 {
-                    return ResponseGeneric<IEnumerable<CustomerNote>>.Error("Müşteri bulunmadı");
+                    return ResponseGeneric<IEnumerable<CustomerNote>>.Error("Hiç not bulunamadı");
                 }
-                return ResponseGeneric<IEnumerable<CustomerNote>>.Success(CustomerNote, "Müşteri bulundu");
+                return ResponseGeneric<IEnumerable<CustomerNote>>.Success(CustomerNote, "Tüm notlar listelendi.");
             }
-            catch
+            catch (Exception ex)
             {
-                return ResponseGeneric<IEnumerable<CustomerNote>>.Error("Müşteri bulunmadı");
+                return ResponseGeneric<IEnumerable<CustomerNote>>.Error($"ListAll hatası: {ex.Message}");
             }
         }
 
-        public Task<IResponse<CustomerNote>> Update(Customer customer)
+        public Task<IResponse<CustomerNote>> Update(CustomerNote customerNote)
         {
             throw new NotImplementedException();
         }

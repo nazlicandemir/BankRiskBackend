@@ -1,4 +1,5 @@
-﻿using BankRiskTracking.DataAccess.Repository;
+﻿using AutoMapper;
+using BankRiskTracking.DataAccess.Repository;
 using BankRiskTracking.Entities.Entities;
 using BankRiskTracking.Entities.Interfaces;
 using BankRiskTracking.Entities.Response;
@@ -7,115 +8,143 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BankRiskTracking.Entities.DTOs;
+using Microsoft.Extensions.Logging;
+
+
+
 
 namespace BankRiskTracking.Business.Services
 {
     public  class RiskHistoryService : IRiskHistoryService
     {
         private readonly IGenericRepository<RiskHistory> _riskHistoryRepository;
-
-        public RiskHistoryService(IGenericRepository<RiskHistory> riskHistoryRepository)
+        private readonly IMapper _mapper; 
+        private readonly ILogger<RiskHistoryService> _logger;
+       
+        public RiskHistoryService(IGenericRepository<RiskHistory> riskHistoryRepository, IMapper mapper, ILogger<RiskHistoryService> logger)
         {
             _riskHistoryRepository = riskHistoryRepository;
+            _mapper = mapper;
+            _logger = logger;
         }
 
 
-        public IResponse<RiskHistory> Create(Customer customer)
+        public IResponse<RiskHistroyCreateDto> Create(RiskHistroyCreateDto riskHistory)
         {
             try
             {
-                if (customer == null)
+                if (riskHistory == null)
                 {
-                    return ResponseGeneric<RiskHistory>.Error("Müşteri bilgileri boş bırakılamaz");
+                    return ResponseGeneric<RiskHistroyCreateDto>.Error("Risk geçmişi verisi boş olamaz.");
                 }
                 var riskHistoryCustomer = new RiskHistory
                 {
-                    CustomerIdi = customer.Id,
-                    RiskLevel = customer.riskLevel,
+                    CustomerId = riskHistory.CustomerIdi,
+                    RiskLevel = riskHistory.RiskLevel,
+                    Title = riskHistory.Title,
+                    Notes = riskHistory.Notes,
                     EvaluatedDate = DateTime.Now
                 };
 
+                var riskHistoryDto = _mapper.Map<RiskHistroyCreateDto>(riskHistoryCustomer);
+
                 _riskHistoryRepository.Create(riskHistoryCustomer);
-                return ResponseGeneric<RiskHistory>.Success(riskHistoryCustomer, "Başarı ile oluşturuldu");
+                return ResponseGeneric<RiskHistroyCreateDto>.Success(riskHistoryDto, "Risk geçmişi başarıyla oluşturuldu.");
             }
-            catch
+            catch (Exception ex)
             {
-                return ResponseGeneric<RiskHistory>.Error("Müşteri bilgileri boş bırakılamaz");
+                return ResponseGeneric<RiskHistroyCreateDto>.Error($"Create işleminde hata oluştu: {ex.Message}");
             }
         }
 
-        public IResponse<RiskHistory> Delete(int id)
+        public IResponse<RiskHistoryQueryDto> Delete(int id)
+        {
+            try
+            {
+                var RiskHistoryDto = _riskHistoryRepository.GetByIdAsync(id).Result;
+                if (RiskHistoryDto == null)
+                {
+                    return ResponseGeneric<RiskHistoryQueryDto>.Error("Silinecek risk geçmişi kaydı bulunamadı.");
+                }
+                _riskHistoryRepository.Delete(RiskHistoryDto);
+                return ResponseGeneric<RiskHistoryQueryDto>.Success(null, "Risk geçmişi başarıyla silindi.");
+            }
+            catch (Exception ex)
+            {
+                return ResponseGeneric<RiskHistoryQueryDto>.Error($"Delete işleminde hata oluştu: {ex.Message}");
+            }
+        }
+
+        public IResponse<RiskHistoryQueryDto> Get(int id)
         {
             try
             {
                 var RiskHistory = _riskHistoryRepository.GetByIdAsync(id).Result;
                 if (RiskHistory == null)
                 {
-                    return ResponseGeneric<RiskHistory>.Error("Müşteri bulunamadı");
+                    return ResponseGeneric<RiskHistoryQueryDto>.Success(null, "Risk geçmişi kaydı bulunamadı.");
                 }
-                _riskHistoryRepository.Delete(RiskHistory);
-                return ResponseGeneric<RiskHistory>.Success(RiskHistory, "Müşteri başarıyla silindi");
+
+                return ResponseGeneric<RiskHistoryQueryDto>.Success(null, "Risk geçmişi başarıyla getirildi.");
             }
-            catch
+            catch (Exception ex)
             {
-                return ResponseGeneric<RiskHistory>.Error("Müşteri bulunamadı");
+                return ResponseGeneric<RiskHistoryQueryDto>.Success(null, $"Get işleminde hata oluştu: {ex.Message}");
             }
         }
 
-        public IResponse<RiskHistory> Get(int id)
-        {
-            try
-            {
-                var RiskHistory = _riskHistoryRepository.GetByIdAsync(id).Result;
-                if (RiskHistory == null)
-                {
-                    return ResponseGeneric<RiskHistory>.Success(null, "Müşteri bulunamadı");
-                }
-
-                return ResponseGeneric<RiskHistory>.Success(RiskHistory, "Müşteri başarıyla bulundu");
-            }
-            catch
-            {
-                return ResponseGeneric<RiskHistory>.Success(null, "Müşteri bulunamadı");
-            }
-        }
-
-        public IResponse<RiskHistory> GetByName(string name)
+        public IResponse<RiskHistoryQueryDto> GetByName(string name)
         {
             try
             {
                 var riskHistory = _riskHistoryRepository.GetAll().FirstOrDefault(x => x.Title == name);
                 if (riskHistory == null)
                 {
-                    return ResponseGeneric<RiskHistory>.Error("Müşteri bulunamadı");
+                    return ResponseGeneric<RiskHistoryQueryDto>.Error("Belirtilen ada sahip risk geçmişi bulunamadı.");
                 }
-                return ResponseGeneric<RiskHistory>.Success(riskHistory, "Müşteri başarıyla bulundu");
+                return ResponseGeneric<RiskHistoryQueryDto>.Success(null, "Risk geçmişi başarıyla getirildi.");
             }
-            catch
+            catch (Exception ex)
             {
-                return ResponseGeneric<RiskHistory>.Error("Müşteri bulunamadı");
+                return ResponseGeneric<RiskHistoryQueryDto>.Error($"GetByName işleminde hata oluştu: {ex.Message}");
             }
         }
 
-        public IResponse<IEnumerable<RiskHistory>> ListAll()
+        public IResponse<IEnumerable<RiskHistoryQueryDto>> ListAll()
         {
             try
             {
-                var riskHistoryList = _riskHistoryRepository.GetAll().ToList();
-                if (riskHistoryList == null)
+                var riskHistoryListDto = _riskHistoryRepository.GetAll().ToList();
+                if (riskHistoryListDto == null)
                 {
-                    return ResponseGeneric<IEnumerable<RiskHistory>>.Error("Müşteri bulunamadı");
+                    return ResponseGeneric<IEnumerable<RiskHistoryQueryDto>>.Error("Hiç risk geçmişi kaydı bulunamadı.");
                 }
-                return ResponseGeneric<IEnumerable<RiskHistory>>.Success(riskHistoryList, " Müşteri başarıyla bulundu");
+                return ResponseGeneric<IEnumerable<RiskHistoryQueryDto>>.Success(null, "Tüm risk geçmişleri başarıyla listelendi.");
             }
-            catch
+            catch (Exception ex)
             {
-                return ResponseGeneric<IEnumerable<RiskHistory>>.Error("Müşteri bulunamadı");
+                return ResponseGeneric<IEnumerable<RiskHistoryQueryDto>>.Error($"ListAll işleminde hata oluştu: {ex.Message}");
+            }
+        }
+
+        public IResponse<IEnumerable<RiskHistoryQueryDto>> GetCustomerByCustomerId(int CustomerId)
+        {
+            try
+            {
+                var risksInCustomer = _riskHistoryRepository.GetAll().Where(x => x.CustomerId == CustomerId).ToList();
+                return null;
+            }catch 
+            {
+                return ResponseGeneric<IEnumerable<RiskHistoryQueryDto>>.Error("Bir hata oluştu ");
             }
         }
 
 
-        public IResponse<RiskHistory> Update(Customer customer)
+
+
+
+        public IResponse<RiskHistory> Update(RiskHistory riskHistory)
         {
             throw new NotImplementedException();
         }

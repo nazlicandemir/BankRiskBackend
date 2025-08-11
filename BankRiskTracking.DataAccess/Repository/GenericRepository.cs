@@ -28,18 +28,21 @@ namespace BankRiskTracking.DataAccess.Repository
 
         public void Create(TEntity entity)
         {
-            _dbSet.Add(entity); 
+            _dbSet.Add(entity);
+            _dbContext.SaveChanges();
         }
 
         public void Delete(TEntity entity)
         {
-            
-           _dbSet.Remove(entity);
+
+            _dbSet.Remove(entity);
+            _dbContext.SaveChanges();
         }
 
         public void DeleteRange(List<TEntity> entities)
         {
             _dbSet.RemoveRange(entities);
+            _dbContext.SaveChanges();
         }
 
         public IQueryable<TEntity> GetAll()
@@ -61,6 +64,7 @@ namespace BankRiskTracking.DataAccess.Repository
         public void UpdateAsync(TEntity entity)
         {
             _dbSet.Update(entity);
+            _dbContext.SaveChanges();
         }
     }
 }

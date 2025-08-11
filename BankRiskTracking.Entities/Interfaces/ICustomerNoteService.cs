@@ -12,8 +12,8 @@ namespace BankRiskTracking.Entities.Interfaces
     {
         IResponse<CustomerNote> GetById(int id);
         IResponse<IEnumerable<CustomerNote>> ListAll(); 
-        Task<IResponse<CustomerNote>> Create(Customer customer);
-        Task<IResponse<CustomerNote>> Update(Customer customer);
+        Task<IResponse<CustomerNote>> Create(CustomerNote customerNote);
+        Task<IResponse<CustomerNote>> Update(CustomerNote customerNote);
         Task<IResponse<CustomerNote>> Delete(int id);
         IResponse<CustomerNote> GetByName(string name);
     }

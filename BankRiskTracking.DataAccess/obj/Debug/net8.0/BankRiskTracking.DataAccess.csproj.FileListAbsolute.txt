@@ -26,6 +26,7 @@ C:\Users\nazli\source\repos\BackendBanking\BankRiskTracking.DataAccess\obj\Debug
 C:\Users\nazli\source\repos\BackendBanking\BankRiskTracking.DataAccess\obj\Debug\net8.0\BankRiskTracking.DataAccess.AssemblyInfoInputs.cache
 C:\Users\nazli\source\repos\BackendBanking\BankRiskTracking.DataAccess\obj\Debug\net8.0\BankRiskTracking.DataAccess.AssemblyInfo.cs
 C:\Users\nazli\source\repos\BackendBanking\BankRiskTracking.DataAccess\obj\Debug\net8.0\BankRiskTracking.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\nazli\source\repos\BackendBanking\BankRiskTracking.DataAccess\obj\Debug\net8.0\BankRiskTracking.DataAccess.sourcelink.json
 C:\Users\nazli\source\repos\BackendBanking\BankRiskTracking.DataAccess\obj\Debug\net8.0\BankRisk.E78B127A.Up2Date
 C:\Users\nazli\source\repos\BackendBanking\BankRiskTracking.DataAccess\obj\Debug\net8.0\BankRiskTracking.DataAccess.dll
 C:\Users\nazli\source\repos\BackendBanking\BankRiskTracking.DataAccess\obj\Debug\net8.0\refint\BankRiskTracking.DataAccess.dll

@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "vCNNVT6umw0=",
+  "dgSpecHash": "6Wzrfe/dR1I=",
   "success": true,
   "projectFilePath": "C:\\Users\\nazli\\source\\repos\\BackendBanking\\BankRiskTracking.Business\\BankRiskTracking.Business.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\nazli\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\nazli\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "C:\\Users\\nazli\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\nazli\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\nazli\\.nuget\\packages\\braintree\\5.34.0\\braintree.5.34.0.nupkg.sha512",

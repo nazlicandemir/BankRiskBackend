@@ -8,105 +8,122 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using BankRiskTracking.Entities.DTOs;
+using AutoMapper;
+
 
 namespace BankRiskTracking.Business.Services
 {
     public class TransactionServices : ITransaction
     {
         private readonly IGenericRepository<Transaction> _transactionRepository;
-        public TransactionServices(IGenericRepository<Transaction> transactionRepository)
+        private readonly IMapper _mapper;
+        public TransactionServices(IGenericRepository<Transaction> transactionRepository, IMapper mapper)
         {
             _transactionRepository = transactionRepository;
+            _mapper = mapper;
         }
-        public IResponse<Transaction> Create(Customer customer)
+        public IResponse<TransactionCreateDto> Create(TransactionCreateDto TransactionCreateDto)
         {
             try
             {
-                if (customer == null)
+                if (TransactionCreateDto == null)
                 {
-                    return ResponseGeneric<Transaction>.Error("Müşteri bilgileri boş bırakılamaz");
+                    return ResponseGeneric<TransactionCreateDto>.Error("Geçersiz müşteri verisi.");
                 }
-                var transactionCustomer = new Transaction
+                var transactionCustomerDto = new Transaction
                 {
-                    CustomerId = customer.Id,
+                    TransactionId = 0,
                     Amount = 1000,
-                    TransactionDate = DateTime.Now
+                    TransactionDate = DateTime.Now,
+                    TrancationType = "Yükleme",
+                    Title = "Otomatik İşlem",
+                    Description = "Sistem tarafından oluşturuldu."
 
                 };
-                _transactionRepository.Create(transactionCustomer);
-                return ResponseGeneric<Transaction>.Success(transactionCustomer, "Başarı ile oluşturuldu");
+                _transactionRepository.Create(transactionCustomerDto);
+                return ResponseGeneric<TransactionCreateDto>.Success(null, "İşlem başarıyla oluşturuldu.");
             }
-            catch
+            catch (Exception ex)
             {
-                return ResponseGeneric<Transaction>.Error("Müşteri bilgileri boş bırakılamaz");
+                return ResponseGeneric<TransactionCreateDto>.Error($"İşlem oluşturulurken hata oluştu: {ex.Message}");
             }
         }
 
-        public IResponse<Transaction> Delete(int id)
+        public IResponse<TransactionQueryDto> Delete(int id)
         {
             try
             {
                 var Transaction = _transactionRepository.GetByIdAsync(id).Result;
                 if (Transaction == null)
                 {
-                    return ResponseGeneric<Transaction>.Error("Müşteri Bulunamadı");
+                    return ResponseGeneric<TransactionQueryDto>.Error("Silinecek işlem bulunamadı.");
                 }
-                return ResponseGeneric<Transaction>.Success(Transaction, "Müşteri başarıyla bulundu");
+                return ResponseGeneric<TransactionQueryDto>.Success(null, "İşlem başarıyla silindi.");
             }
-            catch
+            catch (Exception ex)
             {
-                return ResponseGeneric<Transaction>.Error("Müşteri Bulunamadı");
+                return ResponseGeneric<TransactionQueryDto>.Error($"Silme sırasında hata oluştu: {ex.Message}");
             }
         }
 
-        public IResponse<Transaction> Get(int id)
+        public IResponse<TransactionQueryDto> Get(int id)
         {
             try
             {
                 var Transaction = _transactionRepository.GetByIdAsync(id).Result;
-                if (Transaction == null)
+
+                var TransactionDto = _mapper.Map<TransactionQueryDto>(Transaction);
+
+
+
+                if (TransactionDto == null)
                 {
-                    return ResponseGeneric<Transaction>.Error("Müşteri bulunamadı");
+                    return ResponseGeneric<TransactionQueryDto>.Error("İşlem bulunamadı.");
                 }
-                return ResponseGeneric<Transaction>.Success(Transaction, "Müşteri başarıyla bulundu");
+                return ResponseGeneric<TransactionQueryDto>.Success(null, "İşlem başarıyla getirildi.");
             }
-            catch
+            catch (Exception ex)
             {
-                return ResponseGeneric<Transaction>.Error("Müşteri bulunamadı");
+                return ResponseGeneric<TransactionQueryDto>.Error($"Get işleminde hata oluştu: {ex.Message}");
             }
         }
 
-        public IResponse<Transaction> GetByName(string name)
+        public IResponse<TransactionQueryDto> GetByName(string name)
         {
             try
             {
                 var Transaction = _transactionRepository.GetAll().FirstOrDefault(x => x.Title == name);
-                if (Transaction == null)
+                var TransactionDtos = _mapper.Map<TransactionQueryDto>(Transaction);
+                if (TransactionDtos == null)
                 {
-                    return ResponseGeneric<Transaction>.Error("Müşteri bulunamadı");
+                    return ResponseGeneric<TransactionQueryDto>.Error("Belirtilen isimde işlem bulunamadı.");
                 }
-                return ResponseGeneric<Transaction>.Success(Transaction, "Müşteri başarıyla bulundu");
+                return ResponseGeneric<TransactionQueryDto>.Success(null, "İşlem başarıyla getirildi.");
             }
-            catch
+            catch (Exception ex)
             {
-                return ResponseGeneric<Transaction>.Error("Müşteri bulunamadı");
+                return ResponseGeneric<TransactionQueryDto>.Error($"GetByName işleminde hata oluştu: {ex.Message}");
             }
         }
 
-        public IResponse<IEnumerable<Transaction>> ListAll()
+        public IResponse<IEnumerable<TransactionQueryDto>> ListAll()
         {
             try
             {
                 var transactionList = _transactionRepository.GetAll().ToList();
-                if (transactionList == null)
+                var transactionDtos = _mapper.Map<IEnumerable<TransactionQueryDto>>(transactionList);
+
+
+                if (transactionDtos  == null)
                 {
-                    return ResponseGeneric<IEnumerable<Transaction>>.Error("Müşteri Bulunamadı");
+                    return ResponseGeneric<IEnumerable<TransactionQueryDto>>.Error("Hiç işlem kaydı bulunamadı.");
                 }
-                return ResponseGeneric<IEnumerable<Transaction>>.Success(transactionList, "Müşteri başarıyla bulundu");
+                return ResponseGeneric<IEnumerable<TransactionQueryDto>>.Success(null, "Tüm işlemler başarıyla getirildi.");
             }
-            catch
+            catch (Exception ex)
             {
-                return ResponseGeneric<IEnumerable<Transaction>>.Error("Müşteri Bulunamadı");
+                return ResponseGeneric<IEnumerable<TransactionQueryDto>>.Error($"ListAll işleminde hata oluştu: {ex.Message}");
             }
             
         }

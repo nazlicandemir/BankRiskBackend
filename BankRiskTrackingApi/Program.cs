@@ -1,10 +1,22 @@
+﻿using BankRiskTracking.Business.Mapping;
 using BankRiskTracking.Business.Services;
 using BankRiskTracking.DataAccess;
 using BankRiskTracking.DataAccess.Repository;
 using BankRiskTracking.Entities.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Serilog;
+
+// Log yapilandirilmasi 
+Log.Logger = new LoggerConfiguration()
+.WriteTo.File("logs/log.txt",rollingInterval: RollingInterval.Day)
+.CreateLogger();
+
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Host.UseSerilog(); //serilogu kullanmak icin ekletyin   
+
 
 // Add services to the container.
 
@@ -18,17 +30,27 @@ builder.Services.AddSwaggerGen();
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 */
-builder.Services.AddScoped<ICustomerService, CustomerService>();
+
+builder.Services.AddAutoMapper(typeof(MapProfile));
+
+//builder.Services.AddAutoMapper(typeof(MapProfile)); // Bu şekilde tek bir profile ekleyebilirsiniz.
+
 
 
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 //Servis implamantasyonlari
 //AddTransient :Her istekte yeni bir instance olusturur
 //AddScoped:Her istekte bir instance olusturur ve istegin sonunda yok eder
+
 builder.Services.AddDbContext<DatabaseConnection>();
 builder.Services.AddScoped<ICustomerNoteService, CustomerNoteService>();
 builder.Services.AddScoped<ICustomerService, CustomerService>();
 builder.Services.AddScoped <IRiskHistoryService, RiskHistoryService>();
+
+
+
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -45,3 +67,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+

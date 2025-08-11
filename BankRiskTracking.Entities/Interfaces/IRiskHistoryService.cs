@@ -5,17 +5,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BankRiskTracking.Entities.DTOs;
 
 namespace BankRiskTracking.Entities.Interfaces
 {
     public interface IRiskHistoryService
     {
-        IResponse<RiskHistory> Get(int id);
-        IResponse<IEnumerable<RiskHistory>> ListAll();
-        IResponse<RiskHistory> Create(Customer customer);
-        IResponse<RiskHistory> Update(Customer customer);
-        IResponse<RiskHistory> Delete(int id);
+        IResponse<RiskHistoryQueryDto> Get(int id);
+        IResponse<IEnumerable<RiskHistoryQueryDto>> ListAll();
+        IResponse<RiskHistroyCreateDto> Create(RiskHistroyCreateDto riskHistory);
+        IResponse<RiskHistory> Update(RiskHistory riskHistory);
+        IResponse<RiskHistoryQueryDto> Delete(int id);
 
-        IResponse<RiskHistory> GetByName(string name);
+        IResponse<RiskHistoryQueryDto> GetByName(string name);
     }
 }
