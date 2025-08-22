@@ -1,35 +1,44 @@
 ﻿using BankRiskTracking.Entities.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BankRiskTracking.Entities.DTOs
 {
     public  class RiskHistroyCreateDto
     {
-        public int Id { get; set; }
-        public int CustomerIdi { get; set; }
+       
+        public int CustomerId { get; set; }
 
         public string Title { get; set; }
         public RiskLevel RiskLevel { get; set; }
         public DateTime EvaluatedDate { get; set; }
         public string? Notes { get; set; }
 
-        public Customer Customer { get; set; }
+        
     }
     public class  RiskHistoryQueryDto
     {
         public int Id { get; set; }
-        public int CustomerIdi { get; set; }
+
+        public int CustomerId { get; set; }
 
         public string Title { get; set; }
         public RiskLevel RiskLevel { get; set; }
         public DateTime EvaluatedDate { get; set; }
         public string? Notes { get; set; }
 
-        public Customer Customer { get; set; }
+      
+
+    }
+    public class RiskHistoryUpdateDto
+    {
+        public int Id { get; set; }
+        public int CustomerId { get; set; }
+
+        public string Title { get; set; }
+        public RiskLevel RiskLevel { get; set; }
+        public DateTime EvaluatedDate { get; set; }
+        public string? Notes { get; set; }
+
+      
 
     }
 }

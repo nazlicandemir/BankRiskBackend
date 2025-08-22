@@ -1,0 +1,232 @@
+2025-08-12 09:45:24.708 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-12 09:45:24.733 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-12 09:45:24.735 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-12 09:45:24.736 +03:00 [INF] Hosting environment: Development
+2025-08-12 09:45:24.736 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-12 09:45:29.116 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-12 09:45:29.464 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 361.8801ms
+2025-08-12 09:45:29.498 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-12 09:45:29.501 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-12 09:45:29.508 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 10.3952ms
+2025-08-12 09:45:29.893 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 393.827ms
+2025-08-12 09:45:29.932 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-12 09:45:30.155 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 223.1411ms
+2025-08-12 09:45:36.363 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Customer/ListAll - null null
+2025-08-12 09:45:36.372 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerController.GetAll (BankRiskTrackingApi)'
+2025-08-12 09:45:36.393 +03:00 [INF] Route matched with {action = "GetAll", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BankRiskTrackingApi.Controllers.CustomerController (BankRiskTrackingApi).
+2025-08-12 09:45:37.625 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[BankRiskTracking.Entities.DTOs.CustomerQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-12 09:45:37.637 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerController.GetAll (BankRiskTrackingApi) in 1241.7462ms
+2025-08-12 09:45:37.637 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerController.GetAll (BankRiskTrackingApi)'
+2025-08-12 09:45:37.643 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Customer/ListAll - 200 null application/json; charset=utf-8 1281.0484ms
+2025-08-12 09:45:46.653 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/RiskHistory/ListAll - null null
+2025-08-12 09:45:46.655 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.RiskHistoryController.GetAll (BankRiskTrackingApi)'
+2025-08-12 09:45:46.673 +03:00 [INF] Route matched with {action = "GetAll", controller = "RiskHistory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BankRiskTrackingApi.Controllers.RiskHistoryController (BankRiskTrackingApi).
+2025-08-12 09:45:46.721 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.RiskHistoryController.GetAll (BankRiskTrackingApi) in 47.617ms
+2025-08-12 09:45:46.722 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.RiskHistoryController.GetAll (BankRiskTrackingApi)'
+2025-08-12 09:45:46.727 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'AutoMapper.IMapper' while attempting to activate 'BankRiskTrackingApi.Controllers.RiskHistoryController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method26(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-08-12 09:45:46.755 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/RiskHistory/ListAll - 500 null text/plain; charset=utf-8 102.4009ms
+2025-08-12 09:45:56.559 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Transaction/ListAll - null null
+2025-08-12 09:45:56.560 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi)'
+2025-08-12 09:45:56.561 +03:00 [INF] Route matched with {action = "GetAll", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-12 09:45:56.562 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi) in 0.758ms
+2025-08-12 09:45:56.562 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi)'
+2025-08-12 09:45:56.563 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'BankRiskTracking.Entities.Interfaces.ITransaction' while attempting to activate 'BankRiskTrackingApi.Controllers.TransactionController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method28(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-08-12 09:45:56.565 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Transaction/ListAll - 500 null text/plain; charset=utf-8 6.0635ms
+2025-08-12 09:47:21.166 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-12 09:47:21.206 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-12 09:47:21.209 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-12 09:47:21.209 +03:00 [INF] Hosting environment: Development
+2025-08-12 09:47:21.209 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-12 09:47:23.081 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-12 09:47:23.321 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 257.9433ms
+2025-08-12 09:47:23.345 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-12 09:47:23.345 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-12 09:47:23.358 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 12.8398ms
+2025-08-12 09:47:23.413 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 68.1801ms
+2025-08-12 09:47:23.443 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-12 09:47:23.548 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 105.468ms
+2025-08-12 09:48:20.325 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/RiskHistory/ListAll - null null
+2025-08-12 09:48:20.352 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.RiskHistoryController.GetAll (BankRiskTrackingApi)'
+2025-08-12 09:48:20.412 +03:00 [INF] Route matched with {action = "GetAll", controller = "RiskHistory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BankRiskTrackingApi.Controllers.RiskHistoryController (BankRiskTrackingApi).
+2025-08-12 09:48:22.069 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.RiskHistoryController.GetAll (BankRiskTrackingApi) in 1647.8337ms
+2025-08-12 09:48:22.071 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.RiskHistoryController.GetAll (BankRiskTrackingApi)'
+2025-08-12 09:48:22.081 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'AutoMapper.IMapper' while attempting to activate 'BankRiskTrackingApi.Controllers.RiskHistoryController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method3(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-08-12 09:48:22.164 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/RiskHistory/ListAll - 500 null text/plain; charset=utf-8 1841.0838ms
+2025-08-12 09:52:53.155 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-12 09:52:53.175 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-12 09:52:53.177 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-12 09:52:53.177 +03:00 [INF] Hosting environment: Development
+2025-08-12 09:52:53.177 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-12 09:52:54.437 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-12 09:52:54.651 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 227.1224ms
+2025-08-12 09:52:54.678 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-12 09:52:54.678 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-12 09:52:54.686 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 8.4938ms
+2025-08-12 09:52:54.728 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 50.4375ms
+2025-08-12 09:52:54.762 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-12 09:52:54.928 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 166.1953ms
+2025-08-12 09:53:00.441 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/RiskHistory/ListAll - null null
+2025-08-12 09:53:00.458 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.RiskHistoryController.GetAll (BankRiskTrackingApi)'
+2025-08-12 09:53:00.481 +03:00 [INF] Route matched with {action = "GetAll", controller = "RiskHistory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BankRiskTrackingApi.Controllers.RiskHistoryController (BankRiskTrackingApi).
+2025-08-12 09:53:03.611 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[BankRiskTracking.Entities.DTOs.RiskHistoryQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-12 09:53:03.648 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.RiskHistoryController.GetAll (BankRiskTrackingApi) in 3163.6664ms
+2025-08-12 09:53:03.649 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.RiskHistoryController.GetAll (BankRiskTrackingApi)'
+2025-08-12 09:53:03.657 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/RiskHistory/ListAll - 200 null application/json; charset=utf-8 3217.5648ms
+2025-08-12 09:53:09.862 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Transaction/ListAll - null null
+2025-08-12 09:53:09.864 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi)'
+2025-08-12 09:53:09.866 +03:00 [INF] Route matched with {action = "GetAll", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-12 09:53:09.870 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi) in 3.5517ms
+2025-08-12 09:53:09.870 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi)'
+2025-08-12 09:53:09.873 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'BankRiskTracking.Entities.Interfaces.ITransaction' while attempting to activate 'BankRiskTrackingApi.Controllers.TransactionController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method25(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-08-12 09:53:09.903 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Transaction/ListAll - 500 null text/plain; charset=utf-8 40.8182ms
+2025-08-12 10:01:41.053 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-12 10:01:41.075 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-12 10:01:41.077 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-12 10:01:41.077 +03:00 [INF] Hosting environment: Development
+2025-08-12 10:01:41.077 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-12 10:01:42.412 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-12 10:01:42.786 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 383.3591ms
+2025-08-12 10:01:42.810 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-12 10:01:42.810 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-12 10:01:42.826 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 16.3659ms
+2025-08-12 10:01:42.890 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 81.1058ms
+2025-08-12 10:01:42.929 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-12 10:01:43.092 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 163.4293ms
+2025-08-12 10:01:47.416 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Customer/ListAll - null null
+2025-08-12 10:01:47.435 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerController.GetAll (BankRiskTrackingApi)'
+2025-08-12 10:01:47.467 +03:00 [INF] Route matched with {action = "GetAll", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BankRiskTrackingApi.Controllers.CustomerController (BankRiskTrackingApi).
+2025-08-12 10:01:52.004 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[BankRiskTracking.Entities.DTOs.CustomerQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-12 10:01:52.060 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerController.GetAll (BankRiskTrackingApi) in 4583.3677ms
+2025-08-12 10:01:52.061 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerController.GetAll (BankRiskTrackingApi)'
+2025-08-12 10:01:52.079 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Customer/ListAll - 200 null application/json; charset=utf-8 4664.3879ms
+2025-08-12 10:01:58.229 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/RiskHistory/ListAll - null null
+2025-08-12 10:01:58.232 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.RiskHistoryController.GetAll (BankRiskTrackingApi)'
+2025-08-12 10:01:58.236 +03:00 [INF] Route matched with {action = "GetAll", controller = "RiskHistory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BankRiskTrackingApi.Controllers.RiskHistoryController (BankRiskTrackingApi).
+2025-08-12 10:01:58.612 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[BankRiskTracking.Entities.DTOs.RiskHistoryQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-12 10:01:58.648 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.RiskHistoryController.GetAll (BankRiskTrackingApi) in 412.1213ms
+2025-08-12 10:01:58.649 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.RiskHistoryController.GetAll (BankRiskTrackingApi)'
+2025-08-12 10:01:58.650 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/RiskHistory/ListAll - 200 null application/json; charset=utf-8 421.4889ms
+2025-08-12 10:02:05.259 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Transaction/ListAll - null null
+2025-08-12 10:02:05.259 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi)'
+2025-08-12 10:02:05.261 +03:00 [INF] Route matched with {action = "GetAll", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-12 10:02:05.404 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[BankRiskTracking.Entities.DTOs.TransactionQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-12 10:02:05.421 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi) in 159.2023ms
+2025-08-12 10:02:05.421 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi)'
+2025-08-12 10:02:05.422 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Transaction/ListAll - 200 null application/json; charset=utf-8 163.6081ms
+2025-08-12 11:33:19.198 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-12 11:33:19.222 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-12 11:33:19.224 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-12 11:33:19.224 +03:00 [INF] Hosting environment: Development
+2025-08-12 11:33:19.224 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-12 11:33:21.276 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-12 11:33:21.563 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 313.7923ms
+2025-08-12 11:33:21.597 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-12 11:33:21.597 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-12 11:33:21.612 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 15.5842ms
+2025-08-12 11:33:21.660 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 63.2279ms
+2025-08-12 11:33:21.691 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-12 11:33:21.812 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 120.9579ms
+2025-08-12 11:33:31.292 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Transaction/GetByTransactionId?Id=1 - null null
+2025-08-12 11:33:31.319 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetByTransactionId (BankRiskTrackingApi)'
+2025-08-12 11:33:31.409 +03:00 [INF] Route matched with {action = "GetByTransactionId", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetByTransactionId(Int32) on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-12 11:33:34.719 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-08-12 11:33:34.730 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.GetByTransactionId (BankRiskTrackingApi) in 3311.8538ms
+2025-08-12 11:33:34.730 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetByTransactionId (BankRiskTrackingApi)'
+2025-08-12 11:33:34.754 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Transaction/GetByTransactionId?Id=1 - 404 null text/plain; charset=utf-8 3462.3428ms
+2025-08-12 15:49:15.937 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-12 15:49:15.985 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-12 15:49:15.988 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-12 15:49:15.989 +03:00 [INF] Hosting environment: Development
+2025-08-12 15:49:15.989 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-12 15:49:18.213 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-12 15:49:18.846 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 650.3251ms
+2025-08-12 15:49:18.937 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-12 15:49:18.937 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-12 15:49:18.953 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 15.4538ms
+2025-08-12 15:49:19.310 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 372.8479ms
+2025-08-12 15:49:19.381 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-12 15:49:19.613 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 232.8703ms
+2025-08-12 15:49:47.634 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Transaction/ListAll - null null
+2025-08-12 15:49:47.657 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi)'
+2025-08-12 15:49:47.800 +03:00 [INF] Route matched with {action = "GetAll", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-12 15:49:50.018 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[BankRiskTracking.Entities.DTOs.TransactionQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-12 15:49:50.044 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi) in 2240.3901ms
+2025-08-12 15:49:50.044 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi)'
+2025-08-12 15:49:50.052 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Transaction/ListAll - 200 null application/json; charset=utf-8 2418.7672ms
+2025-08-12 17:14:07.448 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-12 17:14:07.473 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-12 17:14:07.475 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-12 17:14:07.475 +03:00 [INF] Hosting environment: Development
+2025-08-12 17:14:07.475 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-12 17:14:09.207 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-12 17:14:09.480 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 279.9689ms
+2025-08-12 17:14:09.502 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-12 17:14:09.503 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-12 17:14:09.510 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 7.9706ms
+2025-08-12 17:14:09.564 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 60.9759ms
+2025-08-12 17:14:09.593 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-12 17:14:09.719 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 126.1444ms

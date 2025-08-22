@@ -4,11 +4,7 @@ using BankRiskTracking.Entities.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using BankRiskTracking.Entities.DTOs;
-using AutoMapper;
-
-
-
-
+using Microsoft.AspNetCore.RateLimiting;
 
 
 namespace BankRiskTrackingApi.Controllers
@@ -18,21 +14,21 @@ namespace BankRiskTrackingApi.Controllers
     public class RiskHistoryController : ControllerBase
     {
         private readonly IRiskHistoryService _riskHistoryService;  // Tek bir servis kullanılacak
-        private readonly IMapper _mapper;
+       // private readonly IMapper _mapper;
 
-        public RiskHistoryController(IRiskHistoryService riskHistoryService, IMapper mapper)
+        public RiskHistoryController(IRiskHistoryService riskHistoryService /*IMapper mapper*/ )
         {
             _riskHistoryService = riskHistoryService; // Bu zaten doğru şekilde enjekte ediliyor
-            _mapper = mapper;
+            //_mapper = mapper;
         }
 
 
-        
+        [EnableRateLimiting("RateLimiter")]
         [HttpGet("ListAll")]
         public IActionResult GetAll()
         {
             var riskHistory = _riskHistoryService.ListAll();
-            if (riskHistory == null)
+            if (riskHistory == null || !riskHistory.IsSuccess)
             {
                 return BadRequest("Hiç risk geçmişi kaydı bulunamadı.");
             }
@@ -43,14 +39,12 @@ namespace BankRiskTrackingApi.Controllers
             return Ok(riskHistory);
         }
         [HttpDelete("Delete")]
-        public IActionResult Delete(int id)
+        public IActionResult Delete([FromQuery] int customerId)
         {
+            var result = _riskHistoryService.Delete(customerId);
+            if (result == null || !result.IsSuccess)
+                return BadRequest(result?.Message ?? "Silme işlemi başarısız.");
 
-            var result = _riskHistoryService.Delete(id);
-            if (result == null)
-            {
-                return BadRequest("Silinecek risk geçmişi bulunamadı.");
-            }
             return Ok(result);
         }
 
@@ -70,18 +64,30 @@ namespace BankRiskTrackingApi.Controllers
             return Ok(result);
         }
 
-        [HttpGet("GetByName")]  
-        public IActionResult GetByName(string name)
+        [HttpGet("GetByCustomerId")]
+        public IActionResult GetByCustomerId([FromQuery] int customerId)
         {
-            var result = _riskHistoryService.GetByName(name);
+            var result = _riskHistoryService.GetByCustomerId(customerId);
+            if (result == null || !result.IsSuccess)
+                return BadRequest(result?.Message ?? "Kayıt bulunamadı.");
+            return Ok(result);
+        }
 
-            if (result == null)
+
+        [HttpPut("Update")]
+        public IActionResult Update(RiskHistoryUpdateDto riskHistoryUpdateDto)
+        {
+            if(riskHistoryUpdateDto == null)
             {
-                return BadRequest("Belirtilen isme sahip risk geçmişi bulunamadı.");
+                return BadRequest("Boş alan gönderilemez ");
+            }
+            var result = _riskHistoryService.Update(riskHistoryUpdateDto);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.Message);
             }
             return Ok(result);
-
-        }
+        } 
 
 
 

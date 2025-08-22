@@ -1,0 +1,148 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\nazli\\source\\repos\\BackendBanking\\BankRiskTrackingApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{31827882-33FA-4B1F-8705-AC596998188C}|BankRiskTrackingApi.csproj|c:\\users\\nazli\\source\\repos\\backendbanking\\bankrisktrackingapi\\controllers\\riskhistorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31827882-33FA-4B1F-8705-AC596998188C}|BankRiskTrackingApi.csproj|solutionrelative:controllers\\riskhistorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28E667FB-5786-459A-B5C4-2BA813D480E4}|..\\BankRiskTracking.Business\\BankRiskTracking.Business.csproj|c:\\users\\nazli\\source\\repos\\backendbanking\\bankrisktracking.business\\services\\transactionservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28E667FB-5786-459A-B5C4-2BA813D480E4}|..\\BankRiskTracking.Business\\BankRiskTracking.Business.csproj|c:\\users\\nazli\\source\\repos\\backendbanking\\bankrisktracking.business\\services\\customernoteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E25CBC2E-19D6-40ED-B536-E68421CE35D6}|..\\BankRiskTracking.Entities\\BankRiskTracking.Entities.csproj|c:\\users\\nazli\\source\\repos\\backendbanking\\bankrisktracking.entities\\interfaces\\itransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31827882-33FA-4B1F-8705-AC596998188C}|BankRiskTrackingApi.csproj|c:\\users\\nazli\\source\\repos\\backendbanking\\bankrisktrackingapi\\controllers\\transactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31827882-33FA-4B1F-8705-AC596998188C}|BankRiskTrackingApi.csproj|solutionrelative:controllers\\transactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E25CBC2E-19D6-40ED-B536-E68421CE35D6}|..\\BankRiskTracking.Entities\\BankRiskTracking.Entities.csproj|c:\\users\\nazli\\source\\repos\\backendbanking\\bankrisktracking.entities\\dtos\\transactiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E25CBC2E-19D6-40ED-B536-E68421CE35D6}|..\\BankRiskTracking.Entities\\BankRiskTracking.Entities.csproj|c:\\users\\nazli\\source\\repos\\backendbanking\\bankrisktracking.entities\\entities\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31827882-33FA-4B1F-8705-AC596998188C}|BankRiskTrackingApi.csproj|c:\\users\\nazli\\source\\repos\\backendbanking\\bankrisktrackingapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31827882-33FA-4B1F-8705-AC596998188C}|BankRiskTrackingApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RiskHistoryController.cs",
+              "DocumentMoniker": "C:\\Users\\nazli\\source\\repos\\BackendBanking\\BankRiskTrackingApi\\Controllers\\RiskHistoryController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RiskHistoryController.cs",
+              "ToolTip": "C:\\Users\\nazli\\source\\repos\\BackendBanking\\BankRiskTrackingApi\\Controllers\\RiskHistoryController.cs",
+              "RelativeToolTip": "Controllers\\RiskHistoryController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwCQAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T07:30:56.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CustomerNoteService.cs",
+              "DocumentMoniker": "C:\\Users\\nazli\\source\\repos\\BackendBanking\\BankRiskTracking.Business\\Services\\CustomerNoteService.cs",
+              "RelativeDocumentMoniker": "..\\BankRiskTracking.Business\\Services\\CustomerNoteService.cs",
+              "ToolTip": "C:\\Users\\nazli\\source\\repos\\BackendBanking\\BankRiskTracking.Business\\Services\\CustomerNoteService.cs",
+              "RelativeToolTip": "..\\BankRiskTracking.Business\\Services\\CustomerNoteService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T07:30:48.379Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TransactionServices.cs",
+              "DocumentMoniker": "C:\\Users\\nazli\\source\\repos\\BackendBanking\\BankRiskTracking.Business\\Services\\TransactionServices.cs",
+              "RelativeDocumentMoniker": "..\\BankRiskTracking.Business\\Services\\TransactionServices.cs",
+              "ToolTip": "C:\\Users\\nazli\\source\\repos\\BackendBanking\\BankRiskTracking.Business\\Services\\TransactionServices.cs",
+              "RelativeToolTip": "..\\BankRiskTracking.Business\\Services\\TransactionServices.cs",
+              "ViewState": "AgIAAJsAAAAAAAAAAAArwLUAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T13:25:15.637Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TransactionDto.cs",
+              "DocumentMoniker": "C:\\Users\\nazli\\source\\repos\\BackendBanking\\BankRiskTracking.Entities\\DTOs\\TransactionDto.cs",
+              "RelativeDocumentMoniker": "..\\BankRiskTracking.Entities\\DTOs\\TransactionDto.cs",
+              "ToolTip": "C:\\Users\\nazli\\source\\repos\\BackendBanking\\BankRiskTracking.Entities\\DTOs\\TransactionDto.cs",
+              "RelativeToolTip": "..\\BankRiskTracking.Entities\\DTOs\\TransactionDto.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAxwC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T13:25:13.186Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Transaction.cs",
+              "DocumentMoniker": "C:\\Users\\nazli\\source\\repos\\BackendBanking\\BankRiskTracking.Entities\\Entities\\Transaction.cs",
+              "RelativeDocumentMoniker": "..\\BankRiskTracking.Entities\\Entities\\Transaction.cs",
+              "ToolTip": "C:\\Users\\nazli\\source\\repos\\BackendBanking\\BankRiskTracking.Entities\\Entities\\Transaction.cs",
+              "RelativeToolTip": "..\\BankRiskTracking.Entities\\Entities\\Transaction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T13:25:11.239Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ITransaction.cs",
+              "DocumentMoniker": "C:\\Users\\nazli\\source\\repos\\BackendBanking\\BankRiskTracking.Entities\\Interfaces\\ITransaction.cs",
+              "RelativeDocumentMoniker": "..\\BankRiskTracking.Entities\\Interfaces\\ITransaction.cs",
+              "ToolTip": "C:\\Users\\nazli\\source\\repos\\BackendBanking\\BankRiskTracking.Entities\\Interfaces\\ITransaction.cs",
+              "RelativeToolTip": "..\\BankRiskTracking.Entities\\Interfaces\\ITransaction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T13:25:08.762Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TransactionController.cs",
+              "DocumentMoniker": "C:\\Users\\nazli\\source\\repos\\BackendBanking\\BankRiskTrackingApi\\Controllers\\TransactionController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TransactionController.cs",
+              "ToolTip": "C:\\Users\\nazli\\source\\repos\\BackendBanking\\BankRiskTrackingApi\\Controllers\\TransactionController.cs",
+              "RelativeToolTip": "Controllers\\TransactionController.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAApwEUAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T13:25:05.035Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\nazli\\source\\repos\\BackendBanking\\BankRiskTrackingApi\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\nazli\\source\\repos\\BackendBanking\\BankRiskTrackingApi\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowDcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T14:32:57.052Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

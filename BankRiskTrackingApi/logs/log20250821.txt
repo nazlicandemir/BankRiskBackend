@@ -1,0 +1,1074 @@
+2025-08-21 09:37:53.444 +03:00 [INF] User profile is available. Using 'C:\Users\nazli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-21 09:37:54.009 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-21 09:37:54.010 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-21 09:37:54.357 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-21 09:37:54.358 +03:00 [INF] Hosting environment: Development
+2025-08-21 09:37:54.358 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-21 09:37:58.199 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-21 09:37:58.423 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 239.2904ms
+2025-08-21 09:37:58.450 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-21 09:37:58.450 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-21 09:37:58.462 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 12.3167ms
+2025-08-21 09:37:58.643 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 193.6176ms
+2025-08-21 09:37:58.673 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-21 09:37:58.690 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.8175ms
+2025-08-21 09:38:06.626 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Transaction/ListAll - null null
+2025-08-21 09:38:06.888 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi)'
+2025-08-21 09:38:06.966 +03:00 [INF] Route matched with {action = "GetAll", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-21 09:38:08.894 +03:00 [WRN] No store type was specified for the decimal property 'TotalDebt' on entity type 'Customer'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-21 09:38:08.895 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-21 09:38:09.074 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 09:38:10.715 +03:00 [INF] Executed DbCommand (77ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Amount], [t].[CustomerId], [t].[Description], [t].[Title], [t].[TrancationType], [t].[TransactionDate]
+FROM [TransactionHistories] AS [t]
+2025-08-21 09:38:10.759 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1677.0244ms.
+2025-08-21 09:38:10.773 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[BankRiskTracking.Entities.DTOs.TransactionQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-21 09:38:10.806 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi) in 3833.4451ms
+2025-08-21 09:38:10.807 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi)'
+2025-08-21 09:38:10.824 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Transaction/ListAll - 200 null application/json; charset=utf-8 4198.1418ms
+2025-08-21 09:39:25.459 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/User/Login - application/json 63
+2025-08-21 09:39:25.471 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-21 09:39:25.495 +03:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LoginUser(BankRiskTracking.Entities.DTOs.UserLoginDto) on controller BankRiskTrackingApi.Controllers.UserController (BankRiskTrackingApi).
+2025-08-21 09:39:25.803 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 09:39:26.160 +03:00 [INF] Executed DbCommand (58ms) [Parameters=[@__user_Email_0='?' (Size = 4000), @__HashPassword_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[Surname]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__user_Email_0 AND [u].[Password] = @__HashPassword_1
+2025-08-21 09:39:26.281 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 476.7245ms.
+2025-08-21 09:39:26.282 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-21 09:39:26.288 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) in 792.6781ms
+2025-08-21 09:39:26.288 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-21 09:39:26.288 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/User/Login - 200 null application/json; charset=utf-8 829.5031ms
+2025-08-21 09:41:52.973 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Transaction/Create - application/json 456
+2025-08-21 09:41:53.105 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi)'
+2025-08-21 09:41:53.109 +03:00 [INF] Route matched with {action = "Create", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(BankRiskTracking.Entities.DTOs.TransactionCreateDto) on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-21 09:41:53.188 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 09:41:53.647 +03:00 [INF] Executed DbCommand (79ms) [Parameters=[@p0='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [TransactionHistories] ([Amount], [CustomerId], [Description], [Title], [TrancationType], [TransactionDate])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-08-21 09:41:53.695 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 507.1855ms.
+2025-08-21 09:41:53.696 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[BankRiskTracking.Entities.DTOs.TransactionCreateDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-21 09:41:53.710 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi) in 601.5594ms
+2025-08-21 09:41:53.711 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi)'
+2025-08-21 09:41:53.711 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Transaction/Create - 200 null application/json; charset=utf-8 738.6391ms
+2025-08-21 09:42:07.047 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Transaction/ListAll - null null
+2025-08-21 09:42:07.050 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi)'
+2025-08-21 09:42:07.051 +03:00 [INF] Route matched with {action = "GetAll", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-21 09:42:07.056 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 09:42:07.066 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Amount], [t].[CustomerId], [t].[Description], [t].[Title], [t].[TrancationType], [t].[TransactionDate]
+FROM [TransactionHistories] AS [t]
+2025-08-21 09:42:07.076 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 19.6313ms.
+2025-08-21 09:42:07.076 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[BankRiskTracking.Entities.DTOs.TransactionQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-21 09:42:07.079 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi) in 28.6554ms
+2025-08-21 09:42:07.079 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi)'
+2025-08-21 09:42:07.080 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Transaction/ListAll - 200 null application/json; charset=utf-8 32.5032ms
+2025-08-21 09:43:58.920 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Transaction/Create - application/json 435
+2025-08-21 09:43:58.924 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi)'
+2025-08-21 09:43:58.930 +03:00 [INF] Route matched with {action = "Create", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(BankRiskTracking.Entities.DTOs.TransactionCreateDto) on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-21 09:43:58.941 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 09:43:58.969 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[@p0='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [TransactionHistories] ([Amount], [CustomerId], [Description], [Title], [TrancationType], [TransactionDate])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-08-21 09:43:58.971 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 29.4566ms.
+2025-08-21 09:43:58.971 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[BankRiskTracking.Entities.DTOs.TransactionCreateDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-21 09:43:58.971 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi) in 39.1082ms
+2025-08-21 09:43:58.971 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi)'
+2025-08-21 09:43:58.972 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Transaction/Create - 200 null application/json; charset=utf-8 52.0181ms
+2025-08-21 09:44:14.086 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Transaction/ListAll - null null
+2025-08-21 09:44:14.086 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi)'
+2025-08-21 09:44:14.087 +03:00 [INF] Route matched with {action = "GetAll", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-21 09:44:14.088 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 09:44:14.092 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Amount], [t].[CustomerId], [t].[Description], [t].[Title], [t].[TrancationType], [t].[TransactionDate]
+FROM [TransactionHistories] AS [t]
+2025-08-21 09:44:14.092 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3.8641ms.
+2025-08-21 09:44:14.093 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[BankRiskTracking.Entities.DTOs.TransactionQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-21 09:44:14.093 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi) in 6.0963ms
+2025-08-21 09:44:14.093 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi)'
+2025-08-21 09:44:14.093 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Transaction/ListAll - 200 null application/json; charset=utf-8 8.7352ms
+2025-08-21 09:44:14.941 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Transaction/ListAll - null null
+2025-08-21 09:44:14.941 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi)'
+2025-08-21 09:44:14.942 +03:00 [INF] Route matched with {action = "GetAll", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-21 09:44:14.943 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 09:44:14.944 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Amount], [t].[CustomerId], [t].[Description], [t].[Title], [t].[TrancationType], [t].[TransactionDate]
+FROM [TransactionHistories] AS [t]
+2025-08-21 09:44:14.945 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.932ms.
+2025-08-21 09:44:14.945 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[BankRiskTracking.Entities.DTOs.TransactionQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-21 09:44:14.945 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi) in 3.8005ms
+2025-08-21 09:44:14.945 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi)'
+2025-08-21 09:44:14.946 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Transaction/ListAll - 200 null application/json; charset=utf-8 4.7279ms
+2025-08-21 09:46:04.574 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Transaction/Create - application/json 431
+2025-08-21 09:46:04.599 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 06:40:26', Current time (UTC): '21.08.2025 06:46:04'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-21 09:46:04.653 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 06:40:26', Current time (UTC): '21.08.2025 06:46:04'.
+2025-08-21 09:46:04.653 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi)'
+2025-08-21 09:46:04.654 +03:00 [INF] Route matched with {action = "Create", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(BankRiskTracking.Entities.DTOs.TransactionCreateDto) on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-21 09:46:04.656 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 09:46:04.677 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[@p0='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [TransactionHistories] ([Amount], [CustomerId], [Description], [Title], [TrancationType], [TransactionDate])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-08-21 09:46:04.677 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 21.4957ms.
+2025-08-21 09:46:04.678 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[BankRiskTracking.Entities.DTOs.TransactionCreateDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-21 09:46:04.678 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi) in 24.4163ms
+2025-08-21 09:46:04.678 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi)'
+2025-08-21 09:46:04.678 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Transaction/Create - 200 null application/json; charset=utf-8 106.224ms
+2025-08-21 09:48:04.033 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Transaction/Create - application/json 462
+2025-08-21 09:48:04.064 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 06:40:26', Current time (UTC): '21.08.2025 06:48:04'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-21 09:48:04.065 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 06:40:26', Current time (UTC): '21.08.2025 06:48:04'.
+2025-08-21 09:48:04.065 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi)'
+2025-08-21 09:48:04.066 +03:00 [INF] Route matched with {action = "Create", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(BankRiskTracking.Entities.DTOs.TransactionCreateDto) on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-21 09:48:04.068 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 09:48:04.087 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[@p0='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [TransactionHistories] ([Amount], [CustomerId], [Description], [Title], [TrancationType], [TransactionDate])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-08-21 09:48:04.088 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 19.8281ms.
+2025-08-21 09:48:04.088 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[BankRiskTracking.Entities.DTOs.TransactionCreateDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-21 09:48:04.088 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi) in 22.7715ms
+2025-08-21 09:48:04.088 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi)'
+2025-08-21 09:48:04.089 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Transaction/Create - 200 null application/json; charset=utf-8 57.5207ms
+2025-08-21 09:50:29.990 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Transaction/Create - application/json 456
+2025-08-21 09:50:29.994 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 06:40:26', Current time (UTC): '21.08.2025 06:50:29'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-21 09:50:29.995 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 06:40:26', Current time (UTC): '21.08.2025 06:50:29'.
+2025-08-21 09:50:29.995 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi)'
+2025-08-21 09:50:29.995 +03:00 [INF] Route matched with {action = "Create", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(BankRiskTracking.Entities.DTOs.TransactionCreateDto) on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-21 09:50:29.998 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 09:50:30.021 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[@p0='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [TransactionHistories] ([Amount], [CustomerId], [Description], [Title], [TrancationType], [TransactionDate])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-08-21 09:50:30.022 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 23.5977ms.
+2025-08-21 09:50:30.022 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[BankRiskTracking.Entities.DTOs.TransactionCreateDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-21 09:50:30.022 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi) in 27.0216ms
+2025-08-21 09:50:30.022 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi)'
+2025-08-21 09:50:30.023 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Transaction/Create - 200 null application/json; charset=utf-8 32.5651ms
+2025-08-21 09:54:54.539 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Transaction/Create - application/json 487
+2025-08-21 09:54:54.552 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 06:40:26', Current time (UTC): '21.08.2025 06:54:54'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-21 09:54:54.552 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 06:40:26', Current time (UTC): '21.08.2025 06:54:54'.
+2025-08-21 09:54:54.553 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi)'
+2025-08-21 09:54:54.553 +03:00 [INF] Route matched with {action = "Create", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(BankRiskTracking.Entities.DTOs.TransactionCreateDto) on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-21 09:54:54.556 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 09:54:54.596 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[@p0='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [TransactionHistories] ([Amount], [CustomerId], [Description], [Title], [TrancationType], [TransactionDate])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-08-21 09:54:54.598 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 42.1428ms.
+2025-08-21 09:54:54.599 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[BankRiskTracking.Entities.DTOs.TransactionCreateDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-21 09:54:54.600 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi) in 47.3272ms
+2025-08-21 09:54:54.601 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi)'
+2025-08-21 09:54:54.601 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Transaction/Create - 200 null application/json; charset=utf-8 62.304ms
+2025-08-21 09:56:42.030 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Transaction/Create - application/json 445
+2025-08-21 09:56:42.037 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 06:40:26', Current time (UTC): '21.08.2025 06:56:42'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-21 09:56:42.037 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 06:40:26', Current time (UTC): '21.08.2025 06:56:42'.
+2025-08-21 09:56:42.038 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi)'
+2025-08-21 09:56:42.038 +03:00 [INF] Route matched with {action = "Create", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(BankRiskTracking.Entities.DTOs.TransactionCreateDto) on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-21 09:56:42.071 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-08-21 09:56:42.139 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi) in 101.221ms
+2025-08-21 09:56:42.140 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi)'
+2025-08-21 09:56:42.140 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Transaction/Create - 400 null application/problem+json; charset=utf-8 113.3267ms
+2025-08-21 09:57:08.063 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Transaction/Create - application/json 445
+2025-08-21 09:57:08.074 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 06:40:26', Current time (UTC): '21.08.2025 06:57:08'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-21 09:57:08.075 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 06:40:26', Current time (UTC): '21.08.2025 06:57:08'.
+2025-08-21 09:57:08.075 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi)'
+2025-08-21 09:57:08.075 +03:00 [INF] Route matched with {action = "Create", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(BankRiskTracking.Entities.DTOs.TransactionCreateDto) on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-21 09:57:08.078 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-08-21 09:57:08.078 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi) in 3.2456ms
+2025-08-21 09:57:08.078 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi)'
+2025-08-21 09:57:08.078 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Transaction/Create - 400 null application/problem+json; charset=utf-8 15.3024ms
+2025-08-21 09:57:24.943 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Transaction/Create - application/json 445
+2025-08-21 09:57:24.944 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 06:40:26', Current time (UTC): '21.08.2025 06:57:24'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-21 09:57:24.945 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 06:40:26', Current time (UTC): '21.08.2025 06:57:24'.
+2025-08-21 09:57:24.945 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi)'
+2025-08-21 09:57:24.945 +03:00 [INF] Route matched with {action = "Create", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(BankRiskTracking.Entities.DTOs.TransactionCreateDto) on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-21 09:57:24.947 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-08-21 09:57:24.948 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi) in 2.7408ms
+2025-08-21 09:57:24.948 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi)'
+2025-08-21 09:57:24.948 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Transaction/Create - 400 null application/problem+json; charset=utf-8 5.4747ms
+2025-08-21 09:57:31.717 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Transaction/ListAll - null null
+2025-08-21 09:57:31.718 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 06:40:26', Current time (UTC): '21.08.2025 06:57:31'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-21 09:57:31.718 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 06:40:26', Current time (UTC): '21.08.2025 06:57:31'.
+2025-08-21 09:57:31.721 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi)'
+2025-08-21 09:57:31.721 +03:00 [INF] Route matched with {action = "GetAll", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-21 09:57:31.723 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 09:57:31.735 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Amount], [t].[CustomerId], [t].[Description], [t].[Title], [t].[TrancationType], [t].[TransactionDate]
+FROM [TransactionHistories] AS [t]
+2025-08-21 09:57:31.736 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 12.2971ms.
+2025-08-21 09:57:31.736 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[BankRiskTracking.Entities.DTOs.TransactionQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-21 09:57:31.736 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi) in 15.3801ms
+2025-08-21 09:57:31.736 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi)'
+2025-08-21 09:57:31.737 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Transaction/ListAll - 200 null application/json; charset=utf-8 19.7387ms
+2025-08-21 10:01:02.155 +03:00 [INF] User profile is available. Using 'C:\Users\nazli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-21 10:01:02.445 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-21 10:01:02.445 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-21 10:01:02.537 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-21 10:01:02.538 +03:00 [INF] Hosting environment: Development
+2025-08-21 10:01:02.538 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-21 10:01:03.769 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-21 10:01:03.946 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 187.5405ms
+2025-08-21 10:01:03.970 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-21 10:01:03.971 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-21 10:01:03.979 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 8.3601ms
+2025-08-21 10:01:04.029 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 58.9982ms
+2025-08-21 10:01:04.065 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-21 10:01:04.099 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 34.2154ms
+2025-08-21 10:01:10.684 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Transaction/ListAll - null null
+2025-08-21 10:01:10.900 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi)'
+2025-08-21 10:01:10.958 +03:00 [INF] Route matched with {action = "GetAll", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-21 10:01:13.849 +03:00 [WRN] No store type was specified for the decimal property 'TotalDebt' on entity type 'Customer'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-21 10:01:13.850 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-21 10:01:14.089 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 10:01:17.095 +03:00 [INF] Executed DbCommand (69ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Amount], [t].[CustomerId], [t].[Description], [t].[Title], [t].[TrancationType], [t].[TransactionDate]
+FROM [TransactionHistories] AS [t]
+2025-08-21 10:01:17.175 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3050.2205ms.
+2025-08-21 10:01:17.192 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[BankRiskTracking.Entities.DTOs.TransactionQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-21 10:01:17.248 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi) in 6277.6733ms
+2025-08-21 10:01:17.248 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi)'
+2025-08-21 10:01:17.268 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Transaction/ListAll - 200 null application/json; charset=utf-8 6584.4778ms
+2025-08-21 10:01:59.545 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/User/Login - application/json 63
+2025-08-21 10:01:59.558 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-21 10:01:59.565 +03:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LoginUser(BankRiskTracking.Entities.DTOs.UserLoginDto) on controller BankRiskTrackingApi.Controllers.UserController (BankRiskTrackingApi).
+2025-08-21 10:01:59.652 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 10:01:59.773 +03:00 [INF] Executed DbCommand (38ms) [Parameters=[@__user_Email_0='?' (Size = 4000), @__HashPassword_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[Surname]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__user_Email_0 AND [u].[Password] = @__HashPassword_1
+2025-08-21 10:01:59.813 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 160.9018ms.
+2025-08-21 10:01:59.814 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-21 10:01:59.818 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) in 252.5296ms
+2025-08-21 10:01:59.818 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-21 10:01:59.818 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/User/Login - 200 null application/json; charset=utf-8 273.1019ms
+2025-08-21 10:04:20.443 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Transaction/Create - application/json 443
+2025-08-21 10:04:20.506 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi)'
+2025-08-21 10:04:20.507 +03:00 [INF] Route matched with {action = "Create", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(BankRiskTracking.Entities.DTOs.TransactionCreateDto) on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-21 10:04:20.531 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 10:04:20.681 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [TransactionHistories] ([Amount], [CustomerId], [Description], [Title], [TrancationType], [TransactionDate])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-08-21 10:04:20.699 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 167.9417ms.
+2025-08-21 10:04:20.700 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[BankRiskTracking.Entities.DTOs.TransactionCreateDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-21 10:04:20.701 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi) in 193.6247ms
+2025-08-21 10:04:20.701 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi)'
+2025-08-21 10:04:20.701 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Transaction/Create - 200 null application/json; charset=utf-8 258.8712ms
+2025-08-21 10:06:07.924 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Transaction/Create - application/json 435
+2025-08-21 10:06:07.936 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi)'
+2025-08-21 10:06:07.936 +03:00 [INF] Route matched with {action = "Create", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(BankRiskTracking.Entities.DTOs.TransactionCreateDto) on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-21 10:06:07.940 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 10:06:07.964 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[@p0='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [TransactionHistories] ([Amount], [CustomerId], [Description], [Title], [TrancationType], [TransactionDate])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-08-21 10:06:07.965 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 24.4568ms.
+2025-08-21 10:06:07.965 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[BankRiskTracking.Entities.DTOs.TransactionCreateDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-21 10:06:07.965 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi) in 29.0277ms
+2025-08-21 10:06:07.965 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi)'
+2025-08-21 10:06:07.965 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Transaction/Create - 200 null application/json; charset=utf-8 41.9918ms
+2025-08-21 10:06:22.988 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Transaction/ListAll - null null
+2025-08-21 10:06:22.989 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi)'
+2025-08-21 10:06:22.989 +03:00 [INF] Route matched with {action = "GetAll", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-21 10:06:22.990 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 10:06:22.993 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Amount], [t].[CustomerId], [t].[Description], [t].[Title], [t].[TrancationType], [t].[TransactionDate]
+FROM [TransactionHistories] AS [t]
+2025-08-21 10:06:22.993 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3.311ms.
+2025-08-21 10:06:22.993 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[BankRiskTracking.Entities.DTOs.TransactionQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-21 10:06:22.994 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi) in 4.4976ms
+2025-08-21 10:06:22.994 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi)'
+2025-08-21 10:06:22.994 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Transaction/ListAll - 200 null application/json; charset=utf-8 5.9629ms
+2025-08-21 10:07:14.560 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Transaction/GetByName?name=Ahmet%20Y%C4%B1lmaz - null null
+2025-08-21 10:07:14.562 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetByName (BankRiskTrackingApi)'
+2025-08-21 10:07:14.574 +03:00 [INF] Route matched with {action = "GetByName", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetByName(System.String) on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-21 10:07:14.582 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.TransactionController.GetByName (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 10:07:14.628 +03:00 [INF] Executed DbCommand (39ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Amount], [t].[CustomerId], [t].[Description], [t].[Title], [t].[TrancationType], [t].[TransactionDate]
+FROM [TransactionHistories] AS [t]
+WHERE [t].[Title] = @__name_0
+2025-08-21 10:07:14.629 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.TransactionController.GetByName (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 47.1471ms.
+2025-08-21 10:07:14.629 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[BankRiskTracking.Entities.DTOs.TransactionQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-21 10:07:14.631 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.GetByName (BankRiskTrackingApi) in 57.0364ms
+2025-08-21 10:07:14.632 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetByName (BankRiskTrackingApi)'
+2025-08-21 10:07:14.632 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Transaction/GetByName?name=Ahmet%20Y%C4%B1lmaz - 200 null application/json; charset=utf-8 71.5098ms
+2025-08-21 10:07:27.037 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Transaction/GetByTransactionId?Id=1 - null null
+2025-08-21 10:07:27.038 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetByTransactionId (BankRiskTrackingApi)'
+2025-08-21 10:07:27.039 +03:00 [INF] Route matched with {action = "GetByTransactionId", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetByTransactionId(Int32) on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-21 10:07:27.041 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.TransactionController.GetByTransactionId (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 10:07:27.054 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Amount], [t].[CustomerId], [t].[Description], [t].[Title], [t].[TrancationType], [t].[TransactionDate]
+FROM [TransactionHistories] AS [t]
+WHERE [t].[Id] = @__Id_0
+2025-08-21 10:07:27.054 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.TransactionController.GetByTransactionId (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 13.3722ms.
+2025-08-21 10:07:27.054 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[BankRiskTracking.Entities.DTOs.TransactionQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-21 10:07:27.055 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.GetByTransactionId (BankRiskTrackingApi) in 15.5195ms
+2025-08-21 10:07:27.055 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetByTransactionId (BankRiskTrackingApi)'
+2025-08-21 10:07:27.055 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Transaction/GetByTransactionId?Id=1 - 200 null application/json; charset=utf-8 18.526ms
+2025-08-21 10:08:12.848 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Transaction/GetTransactionByCustomerId?CustomerId=9 - null null
+2025-08-21 10:08:12.867 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 07:02:59', Current time (UTC): '21.08.2025 07:08:12'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-21 10:08:12.886 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 07:02:59', Current time (UTC): '21.08.2025 07:08:12'.
+2025-08-21 10:08:12.886 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetTransactionByCustomerId (BankRiskTrackingApi)'
+2025-08-21 10:08:12.887 +03:00 [INF] Route matched with {action = "GetTransactionByCustomerId", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetTransactionByCustomerId(Int32) on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-21 10:08:12.888 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.TransactionController.GetTransactionByCustomerId (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 10:08:12.917 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[@__CustomerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Amount], [t].[CustomerId], [t].[Description], [t].[Title], [t].[TrancationType], [t].[TransactionDate]
+FROM [TransactionHistories] AS [t]
+WHERE [t].[CustomerId] = @__CustomerId_0
+2025-08-21 10:08:12.918 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.TransactionController.GetTransactionByCustomerId (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 30.1782ms.
+2025-08-21 10:08:12.918 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[BankRiskTracking.Entities.DTOs.TransactionQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-21 10:08:12.918 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.GetTransactionByCustomerId (BankRiskTrackingApi) in 31.4795ms
+2025-08-21 10:08:12.918 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetTransactionByCustomerId (BankRiskTrackingApi)'
+2025-08-21 10:08:12.919 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Transaction/GetTransactionByCustomerId?CustomerId=9 - 200 null application/json; charset=utf-8 71.2974ms
+2025-08-21 10:18:11.660 +03:00 [INF] User profile is available. Using 'C:\Users\nazli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-21 10:18:11.931 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-21 10:18:11.932 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-21 10:18:12.016 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-21 10:18:12.016 +03:00 [INF] Hosting environment: Development
+2025-08-21 10:18:12.016 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-21 10:18:13.334 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-21 10:18:13.523 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 200.0741ms
+2025-08-21 10:18:13.549 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-21 10:18:13.549 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-21 10:18:13.558 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 9.1975ms
+2025-08-21 10:18:13.605 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 56.367ms
+2025-08-21 10:18:13.636 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-21 10:18:13.654 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.6044ms
+2025-08-21 10:19:02.397 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/User/Login - application/json 63
+2025-08-21 10:19:02.643 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-21 10:19:02.716 +03:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LoginUser(BankRiskTracking.Entities.DTOs.UserLoginDto) on controller BankRiskTrackingApi.Controllers.UserController (BankRiskTrackingApi).
+2025-08-21 10:19:04.628 +03:00 [WRN] No store type was specified for the decimal property 'TotalDebt' on entity type 'Customer'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-21 10:19:04.628 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-21 10:19:04.918 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 10:19:06.880 +03:00 [INF] Executed DbCommand (109ms) [Parameters=[@__user_Email_0='?' (Size = 4000), @__HashPassword_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[Surname]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__user_Email_0 AND [u].[Password] = @__HashPassword_1
+2025-08-21 10:19:07.037 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2110.1057ms.
+2025-08-21 10:19:07.052 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-21 10:19:07.078 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) in 4352.1492ms
+2025-08-21 10:19:07.079 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-21 10:19:07.102 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/User/Login - 200 null application/json; charset=utf-8 4706.0912ms
+2025-08-21 10:19:41.942 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Transaction/GetByName?name=Ahmet%20Y%C4%B1lmaz - null null
+2025-08-21 10:19:42.055 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetByName (BankRiskTrackingApi)'
+2025-08-21 10:19:42.061 +03:00 [INF] Route matched with {action = "GetByName", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetByName(System.String) on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-21 10:19:42.187 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.TransactionController.GetByName (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 10:19:42.349 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Amount], [t].[CustomerId], [t].[Description], [t].[Title], [t].[TrancationType], [t].[TransactionDate]
+FROM [TransactionHistories] AS [t]
+INNER JOIN [Customer] AS [c] ON [t].[CustomerId] = [c].[Id]
+WHERE [c].[FullName] = @__name_0
+2025-08-21 10:19:42.363 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.TransactionController.GetByName (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 175.7808ms.
+2025-08-21 10:19:42.364 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[BankRiskTracking.Entities.DTOs.TransactionQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-21 10:19:42.410 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.GetByName (BankRiskTrackingApi) in 348.5855ms
+2025-08-21 10:19:42.410 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetByName (BankRiskTrackingApi)'
+2025-08-21 10:19:42.411 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Transaction/GetByName?name=Ahmet%20Y%C4%B1lmaz - 200 null application/json; charset=utf-8 469.7096ms
+2025-08-21 10:25:02.915 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Transaction/ListAll - null null
+2025-08-21 10:25:02.932 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi)'
+2025-08-21 10:25:02.934 +03:00 [INF] Route matched with {action = "GetAll", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-21 10:25:02.944 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 10:25:02.964 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Amount], [t].[CustomerId], [t].[Description], [t].[Title], [t].[TrancationType], [t].[TransactionDate]
+FROM [TransactionHistories] AS [t]
+2025-08-21 10:25:02.966 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 21.2922ms.
+2025-08-21 10:25:02.966 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[BankRiskTracking.Entities.DTOs.TransactionQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-21 10:25:02.968 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi) in 33.9879ms
+2025-08-21 10:25:02.968 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi)'
+2025-08-21 10:25:02.968 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Transaction/ListAll - 200 null application/json; charset=utf-8 54.2634ms
+2025-08-21 10:25:20.100 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7210/api/Transaction/Delete?id=8 - null null
+2025-08-21 10:25:20.108 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 07:20:06', Current time (UTC): '21.08.2025 07:25:20'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-21 10:25:20.124 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 07:20:06', Current time (UTC): '21.08.2025 07:25:20'.
+2025-08-21 10:25:20.124 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.Delete (BankRiskTrackingApi)'
+2025-08-21 10:25:20.125 +03:00 [INF] Route matched with {action = "Delete", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-21 10:25:20.129 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.TransactionController.Delete (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 10:25:20.185 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Amount], [t].[CustomerId], [t].[Description], [t].[Title], [t].[TrancationType], [t].[TransactionDate]
+FROM [TransactionHistories] AS [t]
+WHERE [t].[Id] = @__p_0
+2025-08-21 10:25:20.322 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [TransactionHistories]
+OUTPUT 1
+WHERE [Id] = @p0;
+2025-08-21 10:25:20.328 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.TransactionController.Delete (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 199.4674ms.
+2025-08-21 10:25:20.329 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[BankRiskTracking.Entities.DTOs.TransactionQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-21 10:25:20.329 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.Delete (BankRiskTrackingApi) in 203.2404ms
+2025-08-21 10:25:20.329 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.Delete (BankRiskTrackingApi)'
+2025-08-21 10:25:20.329 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7210/api/Transaction/Delete?id=8 - 200 null application/json; charset=utf-8 228.8696ms
+2025-08-21 10:25:25.099 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Transaction/ListAll - null null
+2025-08-21 10:25:25.100 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 07:20:06', Current time (UTC): '21.08.2025 07:25:25'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-21 10:25:25.101 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 07:20:06', Current time (UTC): '21.08.2025 07:25:25'.
+2025-08-21 10:25:25.101 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi)'
+2025-08-21 10:25:25.101 +03:00 [INF] Route matched with {action = "GetAll", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-21 10:25:25.102 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 10:25:25.104 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Amount], [t].[CustomerId], [t].[Description], [t].[Title], [t].[TrancationType], [t].[TransactionDate]
+FROM [TransactionHistories] AS [t]
+2025-08-21 10:25:25.104 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.3811ms.
+2025-08-21 10:25:25.104 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[BankRiskTracking.Entities.DTOs.TransactionQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-21 10:25:25.105 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi) in 3.4434ms
+2025-08-21 10:25:25.105 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi)'
+2025-08-21 10:25:25.105 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Transaction/ListAll - 200 null application/json; charset=utf-8 5.986ms
+2025-08-21 13:45:39.424 +03:00 [INF] User profile is available. Using 'C:\Users\nazli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-21 13:45:39.777 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-21 13:45:39.777 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-21 13:45:39.960 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-21 13:45:39.961 +03:00 [INF] Hosting environment: Development
+2025-08-21 13:45:39.961 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-21 13:45:41.871 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-21 13:45:42.071 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 211.1167ms
+2025-08-21 13:45:42.103 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-21 13:45:42.104 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-21 13:45:42.114 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 10.7815ms
+2025-08-21 13:45:42.185 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 80.7061ms
+2025-08-21 13:45:42.226 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-21 13:45:42.275 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 49.3125ms
+2025-08-21 14:22:01.287 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Customer/GetByName - null null
+2025-08-21 14:22:01.511 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-08-21 14:22:01.524 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-21 14:22:01.524 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Customer/GetByName - 401 0 null 238.5085ms
+2025-08-21 14:22:07.184 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Customer/ListAll - null null
+2025-08-21 14:22:07.196 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerController.GetAll (BankRiskTrackingApi)'
+2025-08-21 14:22:07.247 +03:00 [INF] Route matched with {action = "GetAll", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BankRiskTrackingApi.Controllers.CustomerController (BankRiskTrackingApi).
+2025-08-21 14:22:08.602 +03:00 [WRN] No store type was specified for the decimal property 'TotalDebt' on entity type 'Customer'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-21 14:22:08.603 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-21 14:22:08.777 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerController.GetAll (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 14:22:10.164 +03:00 [INF] Executed DbCommand (68ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreditScore], [c].[FullName], [c].[IdentityNumber], [c].[LastEvaluated], [c].[Notes], [c].[RiskLevel], [c].[TotalDebt]
+FROM [Customer] AS [c]
+2025-08-21 14:22:10.213 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerController.GetAll (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1429.2498ms.
+2025-08-21 14:22:10.222 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[BankRiskTracking.Entities.DTOs.CustomerQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-21 14:22:10.266 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerController.GetAll (BankRiskTrackingApi) in 3010.1809ms
+2025-08-21 14:22:10.267 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerController.GetAll (BankRiskTrackingApi)'
+2025-08-21 14:22:10.282 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Customer/ListAll - 200 null application/json; charset=utf-8 3098.1684ms
+2025-08-21 14:22:55.792 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/CustomerNote/ListAll - null null
+2025-08-21 14:22:55.795 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.ListAll (BankRiskTrackingApi)'
+2025-08-21 14:22:55.801 +03:00 [INF] Route matched with {action = "ListAll", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ListAll() on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-21 14:22:55.896 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerNoteController.ListAll (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 14:22:55.932 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedDate], [c].[CustomerId], [c].[Name], [c].[NoteText]
+FROM [CustomerNotes] AS [c]
+2025-08-21 14:22:55.937 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerNoteController.ListAll (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 39.9306ms.
+2025-08-21 14:22:55.937 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[BankRiskTracking.Entities.DTOs.CustomerNoteQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-21 14:22:55.945 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.ListAll (BankRiskTrackingApi) in 143.5773ms
+2025-08-21 14:22:55.945 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.ListAll (BankRiskTrackingApi)'
+2025-08-21 14:22:55.945 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/CustomerNote/ListAll - 200 null application/json; charset=utf-8 153.452ms
+2025-08-21 14:31:06.246 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Customer/ListAll - null null
+2025-08-21 14:31:06.269 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerController.GetAll (BankRiskTrackingApi)'
+2025-08-21 14:31:06.270 +03:00 [INF] Route matched with {action = "GetAll", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BankRiskTrackingApi.Controllers.CustomerController (BankRiskTrackingApi).
+2025-08-21 14:31:06.293 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerController.GetAll (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 14:31:06.324 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreditScore], [c].[FullName], [c].[IdentityNumber], [c].[LastEvaluated], [c].[Notes], [c].[RiskLevel], [c].[TotalDebt]
+FROM [Customer] AS [c]
+2025-08-21 14:31:06.326 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerController.GetAll (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 32.6395ms.
+2025-08-21 14:31:06.326 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[BankRiskTracking.Entities.DTOs.CustomerQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-21 14:31:06.327 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerController.GetAll (BankRiskTrackingApi) in 56.6016ms
+2025-08-21 14:31:06.327 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerController.GetAll (BankRiskTrackingApi)'
+2025-08-21 14:31:06.327 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Customer/ListAll - 200 null application/json; charset=utf-8 82.1141ms
+2025-08-21 14:32:02.639 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/User/Login - application/json 63
+2025-08-21 14:32:02.648 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-21 14:32:02.661 +03:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LoginUser(BankRiskTracking.Entities.DTOs.UserLoginDto) on controller BankRiskTrackingApi.Controllers.UserController (BankRiskTrackingApi).
+2025-08-21 14:32:02.781 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 14:32:03.087 +03:00 [INF] Executed DbCommand (64ms) [Parameters=[@__user_Email_0='?' (Size = 4000), @__HashPassword_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[Surname]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__user_Email_0 AND [u].[Password] = @__HashPassword_1
+2025-08-21 14:32:03.164 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 382.8325ms.
+2025-08-21 14:32:03.165 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-21 14:32:03.174 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) in 512.487ms
+2025-08-21 14:32:03.174 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-21 14:32:03.174 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/User/Login - 200 null application/json; charset=utf-8 535.8353ms
+2025-08-21 14:32:33.585 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7210/api/Customer/3 - null null
+2025-08-21 14:32:33.676 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerController.Delete (BankRiskTrackingApi)'
+2025-08-21 14:32:33.679 +03:00 [INF] Route matched with {action = "Delete", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller BankRiskTrackingApi.Controllers.CustomerController (BankRiskTrackingApi).
+2025-08-21 14:32:33.690 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerController.Delete (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 14:32:33.830 +03:00 [INF] Executed DbCommand (32ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreditScore], [c].[FullName], [c].[IdentityNumber], [c].[LastEvaluated], [c].[Notes], [c].[RiskLevel], [c].[TotalDebt]
+FROM [Customer] AS [c]
+WHERE [c].[Id] = @__p_0
+2025-08-21 14:32:33.860 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerController.Delete (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 170.0825ms.
+2025-08-21 14:32:33.861 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-08-21 14:32:33.862 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerController.Delete (BankRiskTrackingApi) in 181.9364ms
+2025-08-21 14:32:33.862 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerController.Delete (BankRiskTrackingApi)'
+2025-08-21 14:32:33.862 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7210/api/Customer/3 - 404 null text/plain; charset=utf-8 277.253ms
+2025-08-21 14:32:54.599 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7210/api/Customer/21 - null null
+2025-08-21 14:32:54.604 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerController.Delete (BankRiskTrackingApi)'
+2025-08-21 14:32:54.604 +03:00 [INF] Route matched with {action = "Delete", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller BankRiskTrackingApi.Controllers.CustomerController (BankRiskTrackingApi).
+2025-08-21 14:32:54.606 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerController.Delete (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 14:32:54.639 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreditScore], [c].[FullName], [c].[IdentityNumber], [c].[LastEvaluated], [c].[Notes], [c].[RiskLevel], [c].[TotalDebt]
+FROM [Customer] AS [c]
+WHERE [c].[Id] = @__p_0
+2025-08-21 14:32:54.641 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerController.Delete (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 34.1992ms.
+2025-08-21 14:32:54.641 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-08-21 14:32:54.641 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerController.Delete (BankRiskTrackingApi) in 36.8809ms
+2025-08-21 14:32:54.641 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerController.Delete (BankRiskTrackingApi)'
+2025-08-21 14:32:54.641 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7210/api/Customer/21 - 404 null text/plain; charset=utf-8 41.98ms
+2025-08-21 14:33:31.779 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Customer/Create - application/json 180
+2025-08-21 14:33:31.789 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerController.Create (BankRiskTrackingApi)'
+2025-08-21 14:33:31.817 +03:00 [INF] Route matched with {action = "Create", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(BankRiskTracking.Entities.DTOs.CustomerCreateDto) on controller BankRiskTrackingApi.Controllers.CustomerController (BankRiskTrackingApi).
+2025-08-21 14:33:31.837 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerController.Create (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 14:33:31.885 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__customer_IdentityNumber_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Customer] AS [c]
+        WHERE [c].[IdentityNumber] = @__customer_IdentityNumber_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-08-21 14:33:32.359 +03:00 [INF] Executed DbCommand (32ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (Precision = 18) (Scale = 2) (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Customer] ([CreditScore], [FullName], [IdentityNumber], [LastEvaluated], [Notes], [RiskLevel], [TotalDebt])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2025-08-21 14:33:32.404 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerController.Create (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 566.8283ms.
+2025-08-21 14:33:32.404 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[BankRiskTracking.Entities.Entities.Customer, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-21 14:33:32.409 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerController.Create (BankRiskTrackingApi) in 592.1334ms
+2025-08-21 14:33:32.409 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerController.Create (BankRiskTrackingApi)'
+2025-08-21 14:33:32.409 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Customer/Create - 200 null application/json; charset=utf-8 630.9705ms
+2025-08-21 14:33:47.943 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Customer/GetByName - null null
+2025-08-21 14:33:47.944 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerController.GetByName (BankRiskTrackingApi)'
+2025-08-21 14:33:47.946 +03:00 [INF] Route matched with {action = "GetByName", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetByName(System.String) on controller BankRiskTrackingApi.Controllers.CustomerController (BankRiskTrackingApi).
+2025-08-21 14:33:47.966 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-08-21 14:33:48.000 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerController.GetByName (BankRiskTrackingApi) in 54.1655ms
+2025-08-21 14:33:48.000 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerController.GetByName (BankRiskTrackingApi)'
+2025-08-21 14:33:48.000 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Customer/GetByName - 400 null application/problem+json; charset=utf-8 57.9431ms
+2025-08-21 14:34:04.480 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7210/api/Customer/Update - application/json 191
+2025-08-21 14:34:04.481 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerController.Update (BankRiskTrackingApi)'
+2025-08-21 14:34:04.488 +03:00 [INF] Route matched with {action = "Update", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Update(BankRiskTracking.Entities.DTOs.CustomerUpdateDto) on controller BankRiskTrackingApi.Controllers.CustomerController (BankRiskTrackingApi).
+2025-08-21 14:34:04.504 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerController.Update (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 14:34:04.510 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreditScore], [c].[FullName], [c].[IdentityNumber], [c].[LastEvaluated], [c].[Notes], [c].[RiskLevel], [c].[TotalDebt]
+FROM [Customer] AS [c]
+WHERE [c].[Id] = @__p_0
+2025-08-21 14:34:04.511 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerController.Update (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 7.2812ms.
+2025-08-21 14:34:04.511 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-08-21 14:34:04.512 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerController.Update (BankRiskTrackingApi) in 23.1641ms
+2025-08-21 14:34:04.512 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerController.Update (BankRiskTrackingApi)'
+2025-08-21 14:34:04.512 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7210/api/Customer/Update - 400 null text/plain; charset=utf-8 33.5961ms
+2025-08-21 14:34:25.367 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/CustomerNote/ListAll - null null
+2025-08-21 14:34:25.369 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.ListAll (BankRiskTrackingApi)'
+2025-08-21 14:34:25.369 +03:00 [INF] Route matched with {action = "ListAll", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ListAll() on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-21 14:34:25.371 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerNoteController.ListAll (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 14:34:25.378 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedDate], [c].[CustomerId], [c].[Name], [c].[NoteText]
+FROM [CustomerNotes] AS [c]
+2025-08-21 14:34:25.379 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerNoteController.ListAll (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 7.0517ms.
+2025-08-21 14:34:25.379 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[BankRiskTracking.Entities.DTOs.CustomerNoteQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-21 14:34:25.379 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.ListAll (BankRiskTrackingApi) in 9.977ms
+2025-08-21 14:34:25.380 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.ListAll (BankRiskTrackingApi)'
+2025-08-21 14:34:25.380 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/CustomerNote/ListAll - 200 null application/json; charset=utf-8 13.0549ms
+2025-08-21 14:34:42.111 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/CustomerNote/21 - null null
+2025-08-21 14:34:42.111 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.GetById (BankRiskTrackingApi)'
+2025-08-21 14:34:42.114 +03:00 [INF] Route matched with {action = "GetById", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetById(Int32) on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-21 14:34:42.122 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerNoteController.GetById (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 14:34:42.136 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreatedDate], [c].[CustomerId], [c].[Name], [c].[NoteText]
+FROM [CustomerNotes] AS [c]
+WHERE [c].[Id] = @__p_0
+2025-08-21 14:34:42.137 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerNoteController.GetById (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 15.2338ms.
+2025-08-21 14:34:42.137 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-08-21 14:34:42.138 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.GetById (BankRiskTrackingApi) in 23.7689ms
+2025-08-21 14:34:42.138 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.GetById (BankRiskTrackingApi)'
+2025-08-21 14:34:42.138 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/CustomerNote/21 - 404 null text/plain; charset=utf-8 28.0422ms
+2025-08-21 14:35:16.426 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7210/api/CustomerNote/21 - null null
+2025-08-21 14:35:16.427 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Delete (BankRiskTrackingApi)'
+2025-08-21 14:35:16.429 +03:00 [INF] Route matched with {action = "Delete", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-21 14:35:16.431 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerNoteController.Delete (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 14:35:16.447 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreatedDate], [c].[CustomerId], [c].[Name], [c].[NoteText]
+FROM [CustomerNotes] AS [c]
+WHERE [c].[Id] = @__p_0
+2025-08-21 14:35:16.448 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerNoteController.Delete (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 16.1526ms.
+2025-08-21 14:35:16.448 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-08-21 14:35:16.448 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.Delete (BankRiskTrackingApi) in 18.5703ms
+2025-08-21 14:35:16.448 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Delete (BankRiskTrackingApi)'
+2025-08-21 14:35:16.448 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7210/api/CustomerNote/21 - 404 null text/plain; charset=utf-8 21.8974ms
+2025-08-21 14:37:22.319 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/CustomerNote/GetByName - null null
+2025-08-21 14:37:22.333 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.GetByName (BankRiskTrackingApi)'
+2025-08-21 14:37:22.339 +03:00 [INF] Route matched with {action = "GetByName", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetByName(System.String) on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-21 14:37:22.341 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-08-21 14:37:22.342 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.GetByName (BankRiskTrackingApi) in 2.9415ms
+2025-08-21 14:37:22.342 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.GetByName (BankRiskTrackingApi)'
+2025-08-21 14:37:22.342 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/CustomerNote/GetByName - 400 null application/problem+json; charset=utf-8 23.6913ms
+2025-08-21 14:37:38.371 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/CustomerNote/Create - application/json 110
+2025-08-21 14:37:38.371 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi)'
+2025-08-21 14:37:38.373 +03:00 [INF] Route matched with {action = "Create", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(BankRiskTracking.Entities.DTOs.CustomerNoteCreateDto) on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-21 14:37:38.380 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 14:37:38.398 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 17.9566ms.
+2025-08-21 14:37:38.399 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-08-21 14:37:38.399 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi) in 26.2945ms
+2025-08-21 14:37:38.399 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi)'
+2025-08-21 14:37:38.400 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/CustomerNote/Create - 400 null text/plain; charset=utf-8 28.8236ms
+2025-08-21 14:37:55.212 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7210/api/CustomerNote/Update - application/json 121
+2025-08-21 14:37:55.213 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Update (BankRiskTrackingApi)'
+2025-08-21 14:37:55.218 +03:00 [INF] Route matched with {action = "Update", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Update(BankRiskTracking.Entities.DTOs.CustomerNoteUpdateDto) on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-21 14:37:55.240 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerNoteController.Update (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 14:37:55.262 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreatedDate], [c].[CustomerId], [c].[Name], [c].[NoteText]
+FROM [CustomerNotes] AS [c]
+WHERE [c].[Id] = @__p_0
+2025-08-21 14:37:55.262 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerNoteController.Update (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 21.8233ms.
+2025-08-21 14:37:55.262 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-08-21 14:37:55.263 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.Update (BankRiskTrackingApi) in 44.8711ms
+2025-08-21 14:37:55.263 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Update (BankRiskTrackingApi)'
+2025-08-21 14:37:55.263 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7210/api/CustomerNote/Update - 400 null text/plain; charset=utf-8 51.5661ms
+2025-08-21 14:38:14.728 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/RiskHistory/ListAll - null null
+2025-08-21 14:38:14.764 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:38:14'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-21 14:38:14.812 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:38:14'.
+2025-08-21 14:38:14.813 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.RiskHistoryController.GetAll (BankRiskTrackingApi)'
+2025-08-21 14:38:14.815 +03:00 [INF] Route matched with {action = "GetAll", controller = "RiskHistory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BankRiskTrackingApi.Controllers.RiskHistoryController (BankRiskTrackingApi).
+2025-08-21 14:38:14.817 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.RiskHistoryController.GetAll (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 14:38:14.843 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[CustomerId], [r].[EvaluatedDate], [r].[Notes], [r].[RiskLevel], [r].[Title]
+FROM [RiskHistories] AS [r]
+2025-08-21 14:38:14.851 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.RiskHistoryController.GetAll (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 33.8255ms.
+2025-08-21 14:38:14.851 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[BankRiskTracking.Entities.DTOs.RiskHistoryQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-21 14:38:14.858 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.RiskHistoryController.GetAll (BankRiskTrackingApi) in 43.1141ms
+2025-08-21 14:38:14.858 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.RiskHistoryController.GetAll (BankRiskTrackingApi)'
+2025-08-21 14:38:14.859 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/RiskHistory/ListAll - 200 null application/json; charset=utf-8 130.8843ms
+2025-08-21 14:38:28.627 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7210/api/RiskHistory/Delete - null null
+2025-08-21 14:38:28.629 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:38:28'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-21 14:38:28.630 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:38:28'.
+2025-08-21 14:38:28.630 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.RiskHistoryController.Delete (BankRiskTrackingApi)'
+2025-08-21 14:38:28.632 +03:00 [INF] Route matched with {action = "Delete", controller = "RiskHistory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller BankRiskTrackingApi.Controllers.RiskHistoryController (BankRiskTrackingApi).
+2025-08-21 14:38:28.635 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.RiskHistoryController.Delete (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 14:38:28.661 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[CustomerId], [r].[EvaluatedDate], [r].[Notes], [r].[RiskLevel], [r].[Title]
+FROM [RiskHistories] AS [r]
+WHERE [r].[CustomerId] = @__customerId_0
+2025-08-21 14:38:28.662 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.RiskHistoryController.Delete (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 26.6764ms.
+2025-08-21 14:38:28.662 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-08-21 14:38:28.662 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.RiskHistoryController.Delete (BankRiskTrackingApi) in 30.4377ms
+2025-08-21 14:38:28.662 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.RiskHistoryController.Delete (BankRiskTrackingApi)'
+2025-08-21 14:38:28.662 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7210/api/RiskHistory/Delete - 400 null text/plain; charset=utf-8 35.8449ms
+2025-08-21 14:38:40.580 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/RiskHistory/Create - application/json 128
+2025-08-21 14:38:40.582 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:38:40'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-21 14:38:40.582 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:38:40'.
+2025-08-21 14:38:40.582 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.RiskHistoryController.Create (BankRiskTrackingApi)'
+2025-08-21 14:38:40.584 +03:00 [INF] Route matched with {action = "Create", controller = "RiskHistory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(BankRiskTracking.Entities.DTOs.RiskHistroyCreateDto) on controller BankRiskTrackingApi.Controllers.RiskHistoryController (BankRiskTrackingApi).
+2025-08-21 14:38:40.597 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.RiskHistoryController.Create (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 14:38:40.661 +03:00 [INF] Executed DbCommand (31ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RiskHistories] ([CustomerId], [EvaluatedDate], [Notes], [RiskLevel], [Title])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-08-21 14:38:40.697 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'BankRiskTracking.DataAccess.DatabaseConnection'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_RiskHistories_Customer_CustomerId". The conflict occurred in database "BankRiskDb", table "dbo.Customer", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSet(Int32 startCommandIndex, RelationalDataReader reader)
+ClientConnectionId:d03f0ac9-2225-42c3-b928-0855d919064a
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSet(Int32 startCommandIndex, RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__112_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_RiskHistories_Customer_CustomerId". The conflict occurred in database "BankRiskDb", table "dbo.Customer", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSet(Int32 startCommandIndex, RelationalDataReader reader)
+ClientConnectionId:d03f0ac9-2225-42c3-b928-0855d919064a
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSet(Int32 startCommandIndex, RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__112_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+2025-08-21 14:38:40.919 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.RiskHistoryController.Create (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 322.3497ms.
+2025-08-21 14:38:40.920 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[BankRiskTracking.Entities.DTOs.RiskHistroyCreateDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-21 14:38:40.923 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.RiskHistoryController.Create (BankRiskTrackingApi) in 338.3684ms
+2025-08-21 14:38:40.923 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.RiskHistoryController.Create (BankRiskTrackingApi)'
+2025-08-21 14:38:40.923 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/RiskHistory/Create - 200 null application/json; charset=utf-8 343.1843ms
+2025-08-21 14:38:52.103 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/RiskHistory/GetByCustomerId - null null
+2025-08-21 14:38:52.104 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:38:52'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-21 14:38:52.105 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:38:52'.
+2025-08-21 14:38:52.105 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.RiskHistoryController.GetByCustomerId (BankRiskTrackingApi)'
+2025-08-21 14:38:52.107 +03:00 [INF] Route matched with {action = "GetByCustomerId", controller = "RiskHistory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetByCustomerId(Int32) on controller BankRiskTrackingApi.Controllers.RiskHistoryController (BankRiskTrackingApi).
+2025-08-21 14:38:52.108 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.RiskHistoryController.GetByCustomerId (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 14:38:52.113 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[CustomerId], [r].[EvaluatedDate], [r].[Notes], [r].[RiskLevel], [r].[Title]
+FROM [RiskHistories] AS [r]
+WHERE [r].[CustomerId] = @__customerId_0
+2025-08-21 14:38:52.113 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.RiskHistoryController.GetByCustomerId (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 5.3064ms.
+2025-08-21 14:38:52.114 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-08-21 14:38:52.114 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.RiskHistoryController.GetByCustomerId (BankRiskTrackingApi) in 7.1327ms
+2025-08-21 14:38:52.114 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.RiskHistoryController.GetByCustomerId (BankRiskTrackingApi)'
+2025-08-21 14:38:52.114 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/RiskHistory/GetByCustomerId - 400 null text/plain; charset=utf-8 11.5375ms
+2025-08-21 14:39:04.907 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7210/api/RiskHistory/Update - application/json 139
+2025-08-21 14:39:04.909 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:39:04'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-21 14:39:04.909 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:39:04'.
+2025-08-21 14:39:04.909 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.RiskHistoryController.Update (BankRiskTrackingApi)'
+2025-08-21 14:39:04.911 +03:00 [INF] Route matched with {action = "Update", controller = "RiskHistory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Update(BankRiskTracking.Entities.DTOs.RiskHistoryUpdateDto) on controller BankRiskTrackingApi.Controllers.RiskHistoryController (BankRiskTrackingApi).
+2025-08-21 14:39:04.919 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.RiskHistoryController.Update (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 14:39:04.937 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[CustomerId], [r].[EvaluatedDate], [r].[Notes], [r].[RiskLevel], [r].[Title]
+FROM [RiskHistories] AS [r]
+WHERE [r].[Id] = @__p_0
+2025-08-21 14:39:04.938 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.RiskHistoryController.Update (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 18.6392ms.
+2025-08-21 14:39:04.938 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-08-21 14:39:04.938 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.RiskHistoryController.Update (BankRiskTrackingApi) in 27.3505ms
+2025-08-21 14:39:04.939 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.RiskHistoryController.Update (BankRiskTrackingApi)'
+2025-08-21 14:39:04.939 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7210/api/RiskHistory/Update - 400 null text/plain; charset=utf-8 31.9881ms
+2025-08-21 14:39:17.589 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Transaction/ListAll - null null
+2025-08-21 14:39:17.601 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:39:17'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-21 14:39:17.601 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:39:17'.
+2025-08-21 14:39:17.601 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi)'
+2025-08-21 14:39:17.604 +03:00 [INF] Route matched with {action = "GetAll", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-21 14:39:17.606 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 14:39:17.628 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Amount], [t].[CustomerId], [t].[Description], [t].[Title], [t].[TrancationType], [t].[TransactionDate]
+FROM [TransactionHistories] AS [t]
+2025-08-21 14:39:17.632 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 26.2947ms.
+2025-08-21 14:39:17.632 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[BankRiskTracking.Entities.DTOs.TransactionQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-21 14:39:17.639 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi) in 34.8501ms
+2025-08-21 14:39:17.639 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetAll (BankRiskTrackingApi)'
+2025-08-21 14:39:17.639 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Transaction/ListAll - 200 null application/json; charset=utf-8 50.2119ms
+2025-08-21 14:39:29.053 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7210/api/Transaction/Delete - null null
+2025-08-21 14:39:29.055 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:39:29'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-21 14:39:29.056 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:39:29'.
+2025-08-21 14:39:29.056 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.Delete (BankRiskTrackingApi)'
+2025-08-21 14:39:29.060 +03:00 [INF] Route matched with {action = "Delete", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-21 14:39:29.064 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.TransactionController.Delete (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 14:39:29.091 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Amount], [t].[CustomerId], [t].[Description], [t].[Title], [t].[TrancationType], [t].[TransactionDate]
+FROM [TransactionHistories] AS [t]
+WHERE [t].[Id] = @__p_0
+2025-08-21 14:39:29.092 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.TransactionController.Delete (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 27.7982ms.
+2025-08-21 14:39:29.092 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[BankRiskTracking.Entities.DTOs.TransactionQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-21 14:39:29.094 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.Delete (BankRiskTrackingApi) in 33.8075ms
+2025-08-21 14:39:29.095 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.Delete (BankRiskTrackingApi)'
+2025-08-21 14:39:29.095 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7210/api/Transaction/Delete - 200 null application/json; charset=utf-8 42.4849ms
+2025-08-21 14:39:41.480 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Transaction/Create - application/json 388
+2025-08-21 14:39:41.482 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:39:41'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-21 14:39:41.482 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:39:41'.
+2025-08-21 14:39:41.482 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi)'
+2025-08-21 14:39:41.492 +03:00 [INF] Route matched with {action = "Create", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(BankRiskTracking.Entities.DTOs.TransactionCreateDto) on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-21 14:39:41.513 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 14:39:41.514 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.9886ms.
+2025-08-21 14:39:41.515 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[BankRiskTracking.Entities.DTOs.TransactionCreateDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-21 14:39:41.516 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi) in 24.4535ms
+2025-08-21 14:39:41.517 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.Create (BankRiskTrackingApi)'
+2025-08-21 14:39:41.517 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Transaction/Create - 200 null application/json; charset=utf-8 36.5357ms
+2025-08-21 14:39:54.868 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Transaction/GetByName - null null
+2025-08-21 14:39:54.869 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:39:54'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-21 14:39:54.874 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:39:54'.
+2025-08-21 14:39:54.874 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetByName (BankRiskTrackingApi)'
+2025-08-21 14:39:54.877 +03:00 [INF] Route matched with {action = "GetByName", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetByName(System.String) on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-21 14:39:54.879 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-08-21 14:39:54.879 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.GetByName (BankRiskTrackingApi) in 1.9509ms
+2025-08-21 14:39:54.879 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetByName (BankRiskTrackingApi)'
+2025-08-21 14:39:54.880 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Transaction/GetByName - 400 null application/problem+json; charset=utf-8 11.2076ms
+2025-08-21 14:40:06.667 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Transaction/GetTransactionByCustomerId - null null
+2025-08-21 14:40:06.668 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:40:06'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-21 14:40:06.669 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:40:06'.
+2025-08-21 14:40:06.669 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetTransactionByCustomerId (BankRiskTrackingApi)'
+2025-08-21 14:40:06.671 +03:00 [INF] Route matched with {action = "GetTransactionByCustomerId", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetTransactionByCustomerId(Int32) on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-21 14:40:06.672 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.TransactionController.GetTransactionByCustomerId (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 14:40:06.689 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__CustomerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Amount], [t].[CustomerId], [t].[Description], [t].[Title], [t].[TrancationType], [t].[TransactionDate]
+FROM [TransactionHistories] AS [t]
+WHERE [t].[CustomerId] = @__CustomerId_0
+2025-08-21 14:40:06.690 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.TransactionController.GetTransactionByCustomerId (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 18.189ms.
+2025-08-21 14:40:06.690 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-08-21 14:40:06.690 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.GetTransactionByCustomerId (BankRiskTrackingApi) in 19.4764ms
+2025-08-21 14:40:06.690 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.GetTransactionByCustomerId (BankRiskTrackingApi)'
+2025-08-21 14:40:06.690 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Transaction/GetTransactionByCustomerId - 404 null text/plain; charset=utf-8 23.1957ms
+2025-08-21 14:40:21.163 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7210/api/Transaction/Update - application/json 174
+2025-08-21 14:40:21.164 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:40:21'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-21 14:40:21.164 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:40:21'.
+2025-08-21 14:40:21.164 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.TransactionController.Update (BankRiskTrackingApi)'
+2025-08-21 14:40:21.175 +03:00 [INF] Route matched with {action = "Update", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Update(BankRiskTracking.Entities.DTOs.TransactionUpdateDto) on controller BankRiskTrackingApi.Controllers.TransactionController (BankRiskTrackingApi).
+2025-08-21 14:40:21.195 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.TransactionController.Update (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 14:40:21.198 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Amount], [t].[CustomerId], [t].[Description], [t].[Title], [t].[TrancationType], [t].[TransactionDate]
+FROM [TransactionHistories] AS [t]
+WHERE [t].[Id] = @__p_0
+2025-08-21 14:40:21.199 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.TransactionController.Update (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 4.2901ms.
+2025-08-21 14:40:21.199 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-08-21 14:40:21.199 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.TransactionController.Update (BankRiskTrackingApi) in 24.087ms
+2025-08-21 14:40:21.199 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.TransactionController.Update (BankRiskTrackingApi)'
+2025-08-21 14:40:21.200 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7210/api/Transaction/Update - 400 null text/plain; charset=utf-8 37.173ms
+2025-08-21 14:40:34.853 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/User/Create - application/json 90
+2025-08-21 14:40:34.854 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:40:34'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-21 14:40:34.855 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:40:34'.
+2025-08-21 14:40:34.855 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.UserController.CreateUser (BankRiskTrackingApi)'
+2025-08-21 14:40:34.862 +03:00 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateUser(BankRiskTracking.Entities.DTOs.UserCreateDto) on controller BankRiskTrackingApi.Controllers.UserController (BankRiskTrackingApi).
+2025-08-21 14:40:34.869 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.UserController.CreateUser (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 14:40:34.891 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@__user_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[Surname]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__user_Email_0
+2025-08-21 14:40:34.892 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.UserController.CreateUser (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 22.2246ms.
+2025-08-21 14:40:34.892 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[BankRiskTracking.Entities.DTOs.UserCreateDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-21 14:40:34.894 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.UserController.CreateUser (BankRiskTrackingApi) in 32.0182ms
+2025-08-21 14:40:34.894 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.UserController.CreateUser (BankRiskTrackingApi)'
+2025-08-21 14:40:34.894 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/User/Create - 400 null application/json; charset=utf-8 41.9604ms
+2025-08-21 14:40:44.517 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/User/Login - application/json 63
+2025-08-21 14:40:44.518 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:40:44'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-21 14:40:44.519 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:40:44'.
+2025-08-21 14:40:44.519 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-21 14:40:44.519 +03:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LoginUser(BankRiskTracking.Entities.DTOs.UserLoginDto) on controller BankRiskTrackingApi.Controllers.UserController (BankRiskTrackingApi).
+2025-08-21 14:40:44.529 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 14:40:44.535 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Email_0='?' (Size = 4000), @__HashPassword_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[Surname]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__user_Email_0 AND [u].[Password] = @__HashPassword_1
+2025-08-21 14:40:44.536 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 7.2136ms.
+2025-08-21 14:40:44.537 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-21 14:40:44.537 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) in 17.9271ms
+2025-08-21 14:40:44.537 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-21 14:40:44.537 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/User/Login - 200 null application/json; charset=utf-8 19.8967ms
+2025-08-21 14:41:26.882 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7210/api/CustomerNote/21 - null null
+2025-08-21 14:41:26.883 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:41:26'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-21 14:41:26.883 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:41:26'.
+2025-08-21 14:41:26.883 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Delete (BankRiskTrackingApi)'
+2025-08-21 14:41:26.883 +03:00 [INF] Route matched with {action = "Delete", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-21 14:41:26.884 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerNoteController.Delete (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 14:41:26.893 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreatedDate], [c].[CustomerId], [c].[Name], [c].[NoteText]
+FROM [CustomerNotes] AS [c]
+WHERE [c].[Id] = @__p_0
+2025-08-21 14:41:26.900 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerNoteController.Delete (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 16.2181ms.
+2025-08-21 14:41:26.901 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-08-21 14:41:26.901 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.Delete (BankRiskTrackingApi) in 17.7779ms
+2025-08-21 14:41:26.901 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Delete (BankRiskTrackingApi)'
+2025-08-21 14:41:26.901 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7210/api/CustomerNote/21 - 404 null text/plain; charset=utf-8 19.8124ms
+2025-08-21 14:41:29.470 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7210/api/CustomerNote/21 - null null
+2025-08-21 14:41:29.471 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:41:29'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-21 14:41:29.471 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:41:29'.
+2025-08-21 14:41:29.471 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Delete (BankRiskTrackingApi)'
+2025-08-21 14:41:29.472 +03:00 [INF] Route matched with {action = "Delete", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-21 14:41:29.473 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerNoteController.Delete (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 14:41:29.485 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreatedDate], [c].[CustomerId], [c].[Name], [c].[NoteText]
+FROM [CustomerNotes] AS [c]
+WHERE [c].[Id] = @__p_0
+2025-08-21 14:41:29.486 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerNoteController.Delete (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 12.9559ms.
+2025-08-21 14:41:29.486 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-08-21 14:41:29.486 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.Delete (BankRiskTrackingApi) in 14.572ms
+2025-08-21 14:41:29.486 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Delete (BankRiskTrackingApi)'
+2025-08-21 14:41:29.487 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7210/api/CustomerNote/21 - 404 null text/plain; charset=utf-8 16.8544ms
+2025-08-21 14:41:32.168 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7210/api/CustomerNote/21 - null null
+2025-08-21 14:41:32.169 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:41:32'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-21 14:41:32.169 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:41:32'.
+2025-08-21 14:41:32.169 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Delete (BankRiskTrackingApi)'
+2025-08-21 14:41:32.169 +03:00 [INF] Route matched with {action = "Delete", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-21 14:41:32.170 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerNoteController.Delete (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 14:41:32.184 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreatedDate], [c].[CustomerId], [c].[Name], [c].[NoteText]
+FROM [CustomerNotes] AS [c]
+WHERE [c].[Id] = @__p_0
+2025-08-21 14:41:32.184 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerNoteController.Delete (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 13.833ms.
+2025-08-21 14:41:32.184 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-08-21 14:41:32.185 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.Delete (BankRiskTrackingApi) in 15.4046ms
+2025-08-21 14:41:32.185 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Delete (BankRiskTrackingApi)'
+2025-08-21 14:41:32.185 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7210/api/CustomerNote/21 - 404 null text/plain; charset=utf-8 17.4505ms
+2025-08-21 14:41:43.198 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7210/api/RiskHistory/Delete - null null
+2025-08-21 14:41:43.199 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:41:43'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-21 14:41:43.200 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21.08.2025 11:33:03', Current time (UTC): '21.08.2025 11:41:43'.
+2025-08-21 14:41:43.200 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.RiskHistoryController.Delete (BankRiskTrackingApi)'
+2025-08-21 14:41:43.200 +03:00 [INF] Route matched with {action = "Delete", controller = "RiskHistory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller BankRiskTrackingApi.Controllers.RiskHistoryController (BankRiskTrackingApi).
+2025-08-21 14:41:43.201 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.RiskHistoryController.Delete (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-21 14:41:43.215 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[CustomerId], [r].[EvaluatedDate], [r].[Notes], [r].[RiskLevel], [r].[Title]
+FROM [RiskHistories] AS [r]
+WHERE [r].[CustomerId] = @__customerId_0
+2025-08-21 14:41:43.215 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.RiskHistoryController.Delete (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 14.06ms.
+2025-08-21 14:41:43.216 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-08-21 14:41:43.216 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.RiskHistoryController.Delete (BankRiskTrackingApi) in 16.1317ms
+2025-08-21 14:41:43.216 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.RiskHistoryController.Delete (BankRiskTrackingApi)'
+2025-08-21 14:41:43.217 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7210/api/RiskHistory/Delete - 400 null text/plain; charset=utf-8 19.0171ms

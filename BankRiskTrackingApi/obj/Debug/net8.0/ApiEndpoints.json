@@ -1,0 +1,362 @@
+[
+  {
+    "ContainingType": "BankRiskTrackingApi.Controllers.CustomerController",
+    "Method": "Delete",
+    "RelativePath": "api/Customer/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankRiskTrackingApi.Controllers.CustomerController",
+    "Method": "Create",
+    "RelativePath": "api/Customer/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customer",
+        "Type": "BankRiskTracking.Entities.DTOs.CustomerCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankRiskTrackingApi.Controllers.CustomerController",
+    "Method": "GetByName",
+    "RelativePath": "api/Customer/GetByName",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankRiskTrackingApi.Controllers.CustomerController",
+    "Method": "GetAll",
+    "RelativePath": "api/Customer/ListAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankRiskTrackingApi.Controllers.CustomerController",
+    "Method": "Update",
+    "RelativePath": "api/Customer/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerUpdateDto",
+        "Type": "BankRiskTracking.Entities.DTOs.CustomerUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankRiskTrackingApi.Controllers.CustomerNoteController",
+    "Method": "GetById",
+    "RelativePath": "api/CustomerNote/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankRiskTrackingApi.Controllers.CustomerNoteController",
+    "Method": "Delete",
+    "RelativePath": "api/CustomerNote/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankRiskTrackingApi.Controllers.CustomerNoteController",
+    "Method": "Create",
+    "RelativePath": "api/CustomerNote/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "BankRiskTracking.Entities.DTOs.CustomerNoteCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankRiskTrackingApi.Controllers.CustomerNoteController",
+    "Method": "GetByName",
+    "RelativePath": "api/CustomerNote/GetByName",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankRiskTrackingApi.Controllers.CustomerNoteController",
+    "Method": "ListAll",
+    "RelativePath": "api/CustomerNote/ListAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankRiskTrackingApi.Controllers.CustomerNoteController",
+    "Method": "Update",
+    "RelativePath": "api/CustomerNote/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "BankRiskTracking.Entities.DTOs.CustomerNoteUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankRiskTrackingApi.Controllers.RiskHistoryController",
+    "Method": "Create",
+    "RelativePath": "api/RiskHistory/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "riskHistory",
+        "Type": "BankRiskTracking.Entities.DTOs.RiskHistroyCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankRiskTrackingApi.Controllers.RiskHistoryController",
+    "Method": "Delete",
+    "RelativePath": "api/RiskHistory/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankRiskTrackingApi.Controllers.RiskHistoryController",
+    "Method": "GetByCustomerId",
+    "RelativePath": "api/RiskHistory/GetByCustomerId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankRiskTrackingApi.Controllers.RiskHistoryController",
+    "Method": "GetAll",
+    "RelativePath": "api/RiskHistory/ListAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankRiskTrackingApi.Controllers.RiskHistoryController",
+    "Method": "Update",
+    "RelativePath": "api/RiskHistory/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "riskHistoryUpdateDto",
+        "Type": "BankRiskTracking.Entities.DTOs.RiskHistoryUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankRiskTrackingApi.Controllers.TransactionController",
+    "Method": "Create",
+    "RelativePath": "api/Transaction/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TransactionCreateDto",
+        "Type": "BankRiskTracking.Entities.DTOs.TransactionCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankRiskTrackingApi.Controllers.TransactionController",
+    "Method": "Delete",
+    "RelativePath": "api/Transaction/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankRiskTrackingApi.Controllers.TransactionController",
+    "Method": "GetByName",
+    "RelativePath": "api/Transaction/GetByName",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankRiskTrackingApi.Controllers.TransactionController",
+    "Method": "GetTransactionByCustomerId",
+    "RelativePath": "api/Transaction/GetTransactionByCustomerId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CustomerId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankRiskTrackingApi.Controllers.TransactionController",
+    "Method": "GetAll",
+    "RelativePath": "api/Transaction/ListAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankRiskTrackingApi.Controllers.TransactionController",
+    "Method": "Update",
+    "RelativePath": "api/Transaction/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "transactionUpdateDto",
+        "Type": "BankRiskTracking.Entities.DTOs.TransactionUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankRiskTrackingApi.Controllers.UserController",
+    "Method": "CreateUser",
+    "RelativePath": "api/User/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userCreateDto",
+        "Type": "BankRiskTracking.Entities.DTOs.UserCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankRiskTrackingApi.Controllers.UserController",
+    "Method": "LoginUser",
+    "RelativePath": "api/User/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userLoginDto",
+        "Type": "BankRiskTracking.Entities.DTOs.UserLoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

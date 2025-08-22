@@ -12,7 +12,6 @@ C:\Users\nazli\source\repos\BankRiskTracking.Entities\obj\Debug\net8.0\ref\BankR
 C:\Users\nazli\source\repos\BackendBanking\BankRiskTracking.Entities\bin\Debug\net8.0\BankRiskTracking.Entities.deps.json
 C:\Users\nazli\source\repos\BackendBanking\BankRiskTracking.Entities\bin\Debug\net8.0\BankRiskTracking.Entities.dll
 C:\Users\nazli\source\repos\BackendBanking\BankRiskTracking.Entities\bin\Debug\net8.0\BankRiskTracking.Entities.pdb
-C:\Users\nazli\source\repos\BackendBanking\BankRiskTracking.Entities\obj\Debug\net8.0\BankRiskTracking.Entities.csproj.AssemblyReference.cache
 C:\Users\nazli\source\repos\BackendBanking\BankRiskTracking.Entities\obj\Debug\net8.0\BankRiskTracking.Entities.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\nazli\source\repos\BackendBanking\BankRiskTracking.Entities\obj\Debug\net8.0\BankRiskTracking.Entities.AssemblyInfoInputs.cache
 C:\Users\nazli\source\repos\BackendBanking\BankRiskTracking.Entities\obj\Debug\net8.0\BankRiskTracking.Entities.AssemblyInfo.cs

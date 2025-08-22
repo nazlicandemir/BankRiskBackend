@@ -1,12 +1,14 @@
-﻿using AutoMapper;
+﻿//using AutoMapper;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using BankRiskTracking.DataAccess.Repository;
 using BankRiskTracking.Entities.DTOs;
 using BankRiskTracking.Entities.Entities;
 using BankRiskTracking.Entities.Interfaces;
 using BankRiskTracking.Entities.Response;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 
 
@@ -15,60 +17,90 @@ namespace BankRiskTracking.Business.Services
     public class CustomerService : ICustomerService
     {
         private readonly IGenericRepository<Customer> _customerRepository;
-        private readonly IMapper _mapper;
+        //private readonly IMapper _mapper;
 
-        public CustomerService(IGenericRepository<Customer> customerRepository,IMapper mapper)
+        public CustomerService(IGenericRepository<Customer> customerRepository) //IMapper mapper)
         {
             _customerRepository = customerRepository;
-            _mapper = mapper;
         }
 
-        public IResponse<Customer>Create(CustomerCreateDto customer)
+        public IResponse<Customer> Create(CustomerCreateDto customer)
         {
             try
             {
                 if (customer == null)
-                {
-                    return (ResponseGeneric<Customer>.Error("Geçersiz müşteri verisi."));
-                }
+                    return ResponseGeneric<Customer>.Error("Geçersiz müşteri verisi.");
+
+                if (string.IsNullOrWhiteSpace(customer.FullName))
+                    return ResponseGeneric<Customer>.Error("Ad-soyad boş olamaz.");
+
+                if (string.IsNullOrWhiteSpace(customer.IdentityNumber))
+                    return ResponseGeneric<Customer>.Error("Kimlik numarası boş olamaz.");
+
+                if (customer.TotalDebt < 0)
+                    return ResponseGeneric<Customer>.Error("Toplam borç negatif olamaz.");
+
+                // Aynı kimlik numarası var mı?
+                bool exists = _customerRepository.GetAll()
+                    .Any(c => c.IdentityNumber == customer.IdentityNumber);
+                if (exists)
+                    return ResponseGeneric<Customer>.Error("Bu kimlik numarasıyla kayıt zaten var.");
+
+                
                 var newCustomer = new Customer
                 {
-                    FullName = customer.FullName
+                    FullName = customer.FullName.Trim(),
+                    IdentityNumber = customer.IdentityNumber.Trim(),
+                    TotalDebt = customer.TotalDebt,
+                    CreditScore = customer.CreditScore,
+                    RiskLevel = customer.RiskLevel,
+                    Notes = customer.Notes,
+                    LastEvaluated = customer.LastEvaluated,
+
 
                 };
 
                 _customerRepository.Create(newCustomer);
-                return ( ResponseGeneric<Customer>.Success(null, "Müşteri başarıyla oluşturuldu."));
+
+                // İstersen entity yerine bir QueryDto döndürebilirsin; şimdilik entity döndürüyorum
+                return ResponseGeneric<Customer>.Success(newCustomer, "Müşteri başarıyla oluşturuldu.");
             }
             catch (Exception ex)
             {
-                return (ResponseGeneric<Customer>.Error($"Müşteri oluşturulurken hata oluştu: {ex.Message}"));
+                return ResponseGeneric<Customer>.Error($"Müşteri oluşturulurken hata oluştu: {ex.Message}");
             }
         }
+
 
         public IResponse<Customer> Delete(int id)
         {
             try
             {
-                // Önce entity var mı onu bul
+                if (id <= 0)
+                    return ResponseGeneric<Customer>.Error("Geçersiz Id.");
+
+                // id ile doğrudan getiriyoruz
                 var customer = _customerRepository.GetByIdAsync(id).Result;
-
                 if (customer == null)
-                {
-                    return 
-                        ResponseGeneric<Customer>.Error("Silinecek müşteri bulunamadı.");
-                }
+                    return ResponseGeneric<Customer>.Error("Silinecek müşteri bulunamadı.");
 
+                // Silip ardından kaydediyoruz
                 _customerRepository.Delete(customer);
+                _customerRepository.SaveChange();
 
-                return 
-                    ResponseGeneric<Customer>.Success(customer, "Müşteri başarıyla silindi");
+                return ResponseGeneric<Customer>.Success(customer, "Müşteri başarıyla silindi.");
+            }
+            catch (DbUpdateConcurrencyException ex)
+            {
+                return ResponseGeneric<Customer>.Error($"Eşzamanlılık hatası: {ex.Message}");
             }
             catch (Exception ex)
             {
-                return ResponseGeneric<Customer>.Error($"Silme işlemi sırasında hata oluştu: {ex.Message}");
+                return ResponseGeneric<Customer>.Error($"Silme işleminde beklenmeyen hata: {ex.Message}");
             }
         }
+
+
 
         public IResponse<Customer> Get(int id)
         {
@@ -104,18 +136,22 @@ namespace BankRiskTracking.Business.Services
             try
             {
                 var customer = _customerRepository.GetAll()
-                                           .Where(x => x.FullName == name)
-                                           .FirstOrDefault();
-                var CustomerQueryDto = _mapper.Map<CustomerQueryDto>(customer);
+                    .FirstOrDefault(x => x.FullName == name);
 
                 if (customer == null)
                 {
-                    IResponse<CustomerQueryDto> errorResponse = ResponseGeneric<CustomerQueryDto>.Error("Müşteri bulunamadı");
-
+                    IResponse<CustomerQueryDto> errorResponse =
+                        ResponseGeneric<CustomerQueryDto>.Error("Müşteri bulunamadı");
                     return Task.FromResult(errorResponse);
                 }
 
-                IResponse<CustomerQueryDto> successResponse = ResponseGeneric<CustomerQueryDto>.Success(CustomerQueryDto, "Müşteriler başarıyla getirildi");
+                var customerQueryDto = new CustomerQueryDto
+                {
+                    FullName = customer.FullName
+                };
+
+                IResponse<CustomerQueryDto> successResponse =
+                    ResponseGeneric<CustomerQueryDto>.Success(customerQueryDto, "Müşteriler başarıyla getirildi");
 
                 return Task.FromResult(successResponse);
             }
@@ -132,13 +168,27 @@ namespace BankRiskTracking.Business.Services
             try
             {
                 var allCustomer = _customerRepository.GetAll().ToList();
-                var customerQueryDto = _mapper.Map<IEnumerable<CustomerQueryDto>>(allCustomer);
+
+                // var customerQueryDto = _mapper.Map<IEnumerable<CustomerQueryDto>>(allCustomer);
+
+                // Listeyi elle maplemek için bir liste oluştur
+                var customerQueryDtoList = new List<CustomerQueryDto>();
+
+                // allCustomer listesindeki her bir Customer nesnesini CustomerQueryDto'ya dönüştür
+                foreach (var customer in allCustomer)
+                {
+                    var customerQueryDto = new CustomerQueryDto
+                    {
+                        FullName = customer.FullName 
+                    };
+                    customerQueryDtoList.Add(customerQueryDto);
+                }
 
                 if (allCustomer == null || allCustomer.Count == 0)
                 {
                     return ResponseGeneric<IEnumerable<CustomerQueryDto>>.Error("Hiç müşteri kaydı bulunamadı.");
                 }
-                return ResponseGeneric<IEnumerable<CustomerQueryDto>>.Success(customerQueryDto, "Müşteri listesi başarıyla getirildi.");
+                return ResponseGeneric<IEnumerable<CustomerQueryDto>>.Success(customerQueryDtoList, "Müşteri listesi başarıyla getirildi.");
             }
             catch (Exception ex)
             {
@@ -146,10 +196,51 @@ namespace BankRiskTracking.Business.Services
             }
         }
 
-        public Task<IResponse<Customer>> Update(Customer customer)
+        public IResponse<CustomerUpdateDto> Update(CustomerUpdateDto customerUpdateDto)
         {
-            throw new System.NotImplementedException();
+            try
+            {
+               
+                var entity = _customerRepository.GetByIdAsync(customerUpdateDto.Id).Result;
+                if (entity == null)
+                    return ResponseGeneric<CustomerUpdateDto>.Error("Müşteri bulunamadı.");
+
+              
+                if (customerUpdateDto.FullName != null)
+                    entity.FullName = customerUpdateDto.FullName;
+
+                if (customerUpdateDto.IdentityNumber != null)
+                    entity.IdentityNumber = customerUpdateDto.IdentityNumber;
+
+                if (customerUpdateDto.TotalDebt != 0)
+                    entity.TotalDebt = customerUpdateDto.TotalDebt;
+
+                if (customerUpdateDto.CreditScore != 0)
+                    entity.CreditScore = customerUpdateDto.CreditScore;
+
+                if (customerUpdateDto.RiskLevel != 0)
+                    entity.RiskLevel = customerUpdateDto.RiskLevel;
+
+                if (customerUpdateDto.Notes != null)
+                    entity.Notes = customerUpdateDto.Notes;
+
+                if (customerUpdateDto.LastEvaluated != default)
+                    entity.LastEvaluated = customerUpdateDto.LastEvaluated;
+
+                // tamamen senkron çağrılar
+                _customerRepository.Update(entity);
+                _customerRepository.SaveChange();
+
+                return ResponseGeneric<CustomerUpdateDto>.Success(customerUpdateDto, "Müşteri başarıyla güncellendi.");
+            }
+            catch (Exception ex)
+            {
+                return ResponseGeneric<CustomerUpdateDto>.Error($"Update işleminde hata: {ex.Message}");
+            }
         }
 
     }
+
+
 }
+

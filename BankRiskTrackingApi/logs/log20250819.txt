@@ -1,0 +1,874 @@
+2025-08-19 10:09:22.864 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-19 10:09:22.907 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-19 10:09:23.149 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-19 10:09:23.150 +03:00 [INF] Hosting environment: Development
+2025-08-19 10:09:23.150 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-19 10:09:25.047 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-19 10:09:25.456 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 430.2943ms
+2025-08-19 10:09:25.464 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-19 10:09:25.464 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-19 10:09:25.476 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 12.9446ms
+2025-08-19 10:09:25.793 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 329.7828ms
+2025-08-19 10:09:25.834 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-19 10:09:25.855 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 21.4531ms
+2025-08-19 10:09:44.842 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/CustomerNote/ListAll - null null
+2025-08-19 10:09:44.865 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.ListAll (BankRiskTrackingApi)'
+2025-08-19 10:09:44.927 +03:00 [INF] Route matched with {action = "ListAll", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ListAll() on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-19 10:09:46.667 +03:00 [WRN] No store type was specified for the decimal property 'TotalDebt' on entity type 'Customer'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-19 10:09:46.668 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-19 10:09:46.850 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerNoteController.ListAll (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 10:09:48.733 +03:00 [INF] Executed DbCommand (125ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedDate], [c].[CustomerId], [c].[Name], [c].[NoteText]
+FROM [CustomerNotes] AS [c]
+2025-08-19 10:09:48.787 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerNoteController.ListAll (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 1928.6615ms.
+2025-08-19 10:09:48.801 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-08-19 10:09:48.809 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.ListAll (BankRiskTrackingApi) in 3875.8381ms
+2025-08-19 10:09:48.810 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.ListAll (BankRiskTrackingApi)'
+2025-08-19 10:09:48.827 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/CustomerNote/ListAll - 404 null text/plain; charset=utf-8 3985.2507ms
+2025-08-19 10:10:24.926 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/User/Login - application/json 63
+2025-08-19 10:10:24.939 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-19 10:10:24.965 +03:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LoginUser(BankRiskTracking.Entities.DTOs.UserLoginDto) on controller BankRiskTrackingApi.Controllers.UserController (BankRiskTrackingApi).
+2025-08-19 10:10:24.975 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) in 9.989ms
+2025-08-19 10:10:24.978 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-19 10:10:24.987 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'BankRiskTracking.Entities.Interfaces.IUserService' while attempting to activate 'BankRiskTrackingApi.Controllers.UserController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method21(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-08-19 10:10:25.054 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/User/Login - 500 null text/plain; charset=utf-8 128.2715ms
+2025-08-19 10:11:37.714 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-19 10:11:37.738 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-19 10:11:37.834 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-19 10:11:37.835 +03:00 [INF] Hosting environment: Development
+2025-08-19 10:11:37.835 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-19 10:11:38.996 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-19 10:11:39.185 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 204.4699ms
+2025-08-19 10:11:39.218 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-19 10:11:39.218 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-19 10:11:39.226 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 8.045ms
+2025-08-19 10:11:39.302 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 83.3159ms
+2025-08-19 10:11:39.416 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-19 10:11:39.458 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 46.9157ms
+2025-08-19 10:12:32.054 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/User/Login - application/json 63
+2025-08-19 10:12:32.076 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-19 10:12:32.148 +03:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LoginUser(BankRiskTracking.Entities.DTOs.UserLoginDto) on controller BankRiskTrackingApi.Controllers.UserController (BankRiskTrackingApi).
+2025-08-19 10:12:32.163 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) in 5.0422ms
+2025-08-19 10:12:32.165 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-19 10:12:32.174 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'BankRiskTracking.Entities.Interfaces.IUserService' while attempting to activate 'BankRiskTrackingApi.Controllers.UserController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method3(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-08-19 10:12:32.261 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/User/Login - 500 null text/plain; charset=utf-8 208.8528ms
+2025-08-19 10:26:45.464 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-19 10:26:45.486 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-19 10:26:45.576 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-19 10:26:45.577 +03:00 [INF] Hosting environment: Development
+2025-08-19 10:26:45.577 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-19 10:26:46.942 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-19 10:26:47.158 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 225.6436ms
+2025-08-19 10:26:47.191 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-19 10:26:47.191 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-19 10:26:47.206 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 15.2799ms
+2025-08-19 10:26:47.285 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 94.0054ms
+2025-08-19 10:26:47.371 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-19 10:26:47.419 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 48.9673ms
+2025-08-19 10:27:35.437 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/User/Login - application/json 63
+2025-08-19 10:27:35.466 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-19 10:27:35.550 +03:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LoginUser(BankRiskTracking.Entities.DTOs.UserLoginDto) on controller BankRiskTrackingApi.Controllers.UserController (BankRiskTrackingApi).
+2025-08-19 10:27:37.451 +03:00 [WRN] No store type was specified for the decimal property 'TotalDebt' on entity type 'Customer'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-19 10:27:37.452 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-19 10:27:37.820 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 10:27:39.803 +03:00 [INF] Executed DbCommand (124ms) [Parameters=[@__user_Email_0='?' (Size = 4000), @__HashPassword_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[Surname]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__user_Email_0 AND [u].[Password] = @__HashPassword_1
+2025-08-19 10:27:40.010 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2179.4836ms.
+2025-08-19 10:27:40.022 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-19 10:27:40.038 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) in 4480.5697ms
+2025-08-19 10:27:40.039 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-19 10:27:40.053 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/User/Login - 200 null application/json; charset=utf-8 4616.2346ms
+2025-08-19 10:27:53.729 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-19 10:27:53.786 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-19 10:27:53.790 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-19 10:27:53.810 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 23.8703ms
+2025-08-19 10:27:53.825 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 95.5018ms
+2025-08-19 10:27:53.852 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 64.6922ms
+2025-08-19 10:27:53.880 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-19 10:27:53.897 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.3237ms
+2025-08-19 10:28:16.789 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-19 10:28:16.828 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-19 10:28:16.907 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-19 10:28:16.907 +03:00 [INF] Hosting environment: Development
+2025-08-19 10:28:16.908 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-19 10:28:17.935 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-19 10:28:18.152 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 228.3128ms
+2025-08-19 10:28:18.174 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-19 10:28:18.174 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-19 10:28:18.182 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 8.8957ms
+2025-08-19 10:28:18.227 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 53.4645ms
+2025-08-19 10:28:18.257 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-19 10:28:18.276 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.7692ms
+2025-08-19 10:37:55.449 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-19 10:37:55.489 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-19 10:37:55.647 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-19 10:37:55.648 +03:00 [INF] Hosting environment: Development
+2025-08-19 10:37:55.648 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-19 10:37:57.359 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-19 10:37:57.557 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 211.2157ms
+2025-08-19 10:37:57.569 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-19 10:37:57.569 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-19 10:37:57.578 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 9.4185ms
+2025-08-19 10:37:57.620 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 51.5351ms
+2025-08-19 10:37:57.650 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-19 10:37:57.667 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.4323ms
+2025-08-19 10:49:57.046 +03:00 [WRN] No store type was specified for the decimal property 'TotalDebt' on entity type 'Customer'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-19 10:49:57.082 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-19 10:49:57.343 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-19 10:49:57.343 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-19 10:49:57.452 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-19 10:49:57.452 +03:00 [INF] Hosting environment: Development
+2025-08-19 10:49:57.452 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-19 10:49:58.302 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-19 10:49:58.507 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 223.1189ms
+2025-08-19 10:49:58.527 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-19 10:49:58.527 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-19 10:49:58.536 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 9.6158ms
+2025-08-19 10:49:58.582 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 55.2167ms
+2025-08-19 10:49:58.611 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-19 10:49:58.623 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.6204ms
+2025-08-19 10:55:06.977 +03:00 [WRN] No store type was specified for the decimal property 'TotalDebt' on entity type 'Customer'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-19 10:55:07.003 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-19 10:55:07.298 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-19 10:55:07.298 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-19 10:55:07.388 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-19 10:55:07.389 +03:00 [INF] Hosting environment: Development
+2025-08-19 10:55:07.389 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-19 10:55:08.669 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-19 10:55:08.878 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 221.64ms
+2025-08-19 10:55:08.896 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-19 10:55:08.896 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-19 10:55:08.906 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 10.7523ms
+2025-08-19 10:55:08.953 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 56.6669ms
+2025-08-19 10:55:08.986 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-19 10:55:09.009 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 23.1899ms
+2025-08-19 11:35:18.944 +03:00 [INF] User profile is available. Using 'C:\Users\nazli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-19 11:35:19.223 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-19 11:35:19.223 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-19 11:35:19.306 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-19 11:35:19.307 +03:00 [INF] Hosting environment: Development
+2025-08-19 11:35:19.307 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-19 11:35:20.718 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-19 11:35:20.889 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 189.1254ms
+2025-08-19 11:35:20.917 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-19 11:35:20.917 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-19 11:35:20.926 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 9.6932ms
+2025-08-19 11:35:20.995 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 78.4906ms
+2025-08-19 11:35:21.039 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-19 11:35:21.078 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 39.9863ms
+2025-08-19 11:35:52.059 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/User/Login - application/json 63
+2025-08-19 11:35:52.303 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-19 11:35:52.381 +03:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LoginUser(BankRiskTracking.Entities.DTOs.UserLoginDto) on controller BankRiskTrackingApi.Controllers.UserController (BankRiskTrackingApi).
+2025-08-19 11:35:53.823 +03:00 [WRN] No store type was specified for the decimal property 'TotalDebt' on entity type 'Customer'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-19 11:35:53.824 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-19 11:35:54.125 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 11:35:55.736 +03:00 [INF] Executed DbCommand (76ms) [Parameters=[@__user_Email_0='?' (Size = 4000), @__HashPassword_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[Surname]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__user_Email_0 AND [u].[Password] = @__HashPassword_1
+2025-08-19 11:35:55.827 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1693.9547ms.
+2025-08-19 11:35:55.837 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-19 11:35:55.853 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) in 3466.6795ms
+2025-08-19 11:35:55.854 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-19 11:35:55.867 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/User/Login - 200 null application/json; charset=utf-8 3808.0253ms
+2025-08-19 13:46:20.763 +03:00 [INF] User profile is available. Using 'C:\Users\nazli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-19 13:46:21.078 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-19 13:46:21.079 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-19 13:46:21.163 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-19 13:46:21.163 +03:00 [INF] Hosting environment: Development
+2025-08-19 13:46:21.163 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-19 13:46:22.639 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-19 13:46:22.902 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 283.3121ms
+2025-08-19 13:46:22.928 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-19 13:46:22.928 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-19 13:46:22.940 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 11.7718ms
+2025-08-19 13:46:23.000 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 71.8968ms
+2025-08-19 13:46:23.036 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-19 13:46:23.073 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 37.8271ms
+2025-08-19 13:46:32.955 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/Customer/ListAll - null null
+2025-08-19 13:46:33.142 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerController.GetAll (BankRiskTrackingApi)'
+2025-08-19 13:46:33.179 +03:00 [INF] Route matched with {action = "GetAll", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BankRiskTrackingApi.Controllers.CustomerController (BankRiskTrackingApi).
+2025-08-19 13:46:34.519 +03:00 [WRN] No store type was specified for the decimal property 'TotalDebt' on entity type 'Customer'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-19 13:46:34.519 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-19 13:46:34.672 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerController.GetAll (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 13:46:35.692 +03:00 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreditScore], [c].[FullName], [c].[IdentityNumber], [c].[LastEvaluated], [c].[Notes], [c].[RiskLevel], [c].[TotalDebt]
+FROM [Customer] AS [c]
+2025-08-19 13:46:35.736 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerController.GetAll (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1058.5322ms.
+2025-08-19 13:46:35.745 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[BankRiskTracking.Entities.DTOs.CustomerQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-19 13:46:35.779 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerController.GetAll (BankRiskTrackingApi) in 2594.5574ms
+2025-08-19 13:46:35.780 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerController.GetAll (BankRiskTrackingApi)'
+2025-08-19 13:46:35.790 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/Customer/ListAll - 200 null application/json; charset=utf-8 2836.1099ms
+2025-08-19 13:47:13.007 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/User/Login - application/json 63
+2025-08-19 13:47:13.020 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-19 13:47:13.033 +03:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LoginUser(BankRiskTracking.Entities.DTOs.UserLoginDto) on controller BankRiskTrackingApi.Controllers.UserController (BankRiskTrackingApi).
+2025-08-19 13:47:13.188 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 13:47:13.355 +03:00 [INF] Executed DbCommand (32ms) [Parameters=[@__user_Email_0='?' (Size = 4000), @__HashPassword_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[Surname]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__user_Email_0 AND [u].[Password] = @__HashPassword_1
+2025-08-19 13:47:13.357 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 168.4904ms.
+2025-08-19 13:47:13.358 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-08-19 13:47:13.358 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) in 324.4625ms
+2025-08-19 13:47:13.358 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-19 13:47:13.358 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/User/Login - 400 null text/plain; charset=utf-8 351.4312ms
+2025-08-19 13:47:17.371 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/User/Login - application/json 63
+2025-08-19 13:47:17.375 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-19 13:47:17.375 +03:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LoginUser(BankRiskTracking.Entities.DTOs.UserLoginDto) on controller BankRiskTrackingApi.Controllers.UserController (BankRiskTrackingApi).
+2025-08-19 13:47:17.397 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 13:47:17.408 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__user_Email_0='?' (Size = 4000), @__HashPassword_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[Surname]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__user_Email_0 AND [u].[Password] = @__HashPassword_1
+2025-08-19 13:47:17.408 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 10.8854ms.
+2025-08-19 13:47:17.409 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-08-19 13:47:17.409 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) in 33.5116ms
+2025-08-19 13:47:17.409 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-19 13:47:17.409 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/User/Login - 400 null text/plain; charset=utf-8 38.5759ms
+2025-08-19 13:47:29.716 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/User/Login - application/json 63
+2025-08-19 13:47:29.717 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-19 13:47:29.718 +03:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LoginUser(BankRiskTracking.Entities.DTOs.UserLoginDto) on controller BankRiskTrackingApi.Controllers.UserController (BankRiskTrackingApi).
+2025-08-19 13:47:29.727 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 13:47:29.730 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__user_Email_0='?' (Size = 4000), @__HashPassword_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[Surname]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__user_Email_0 AND [u].[Password] = @__HashPassword_1
+2025-08-19 13:47:29.784 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 56.9007ms.
+2025-08-19 13:47:29.784 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-19 13:47:29.790 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) in 72.391ms
+2025-08-19 13:47:29.790 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-19 13:47:29.791 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/User/Login - 200 null application/json; charset=utf-8 74.4303ms
+2025-08-19 13:48:47.035 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/CustomerNote/Create - application/json 229
+2025-08-19 13:48:47.108 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi)'
+2025-08-19 13:48:47.110 +03:00 [INF] Route matched with {action = "Create", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(BankRiskTracking.Entities.DTOs.CustomerNoteCreateDto) on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-19 13:48:47.122 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 13:48:47.213 +03:00 [INF] Executed DbCommand (32ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreatedDate], [c].[CustomerId], [c].[Name], [c].[NoteText]
+FROM [CustomerNotes] AS [c]
+WHERE [c].[Id] = @__p_0
+2025-08-19 13:48:47.227 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 105.1436ms.
+2025-08-19 13:48:47.228 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-08-19 13:48:47.228 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi) in 117.7154ms
+2025-08-19 13:48:47.228 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi)'
+2025-08-19 13:48:47.228 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/CustomerNote/Create - 400 null text/plain; charset=utf-8 193.6993ms
+2025-08-19 13:49:00.015 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/CustomerNote/Create - application/json 229
+2025-08-19 13:49:00.018 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi)'
+2025-08-19 13:49:00.018 +03:00 [INF] Route matched with {action = "Create", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(BankRiskTracking.Entities.DTOs.CustomerNoteCreateDto) on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-19 13:49:00.022 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 13:49:00.034 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreatedDate], [c].[CustomerId], [c].[Name], [c].[NoteText]
+FROM [CustomerNotes] AS [c]
+WHERE [c].[Id] = @__p_0
+2025-08-19 13:49:00.036 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 14.0382ms.
+2025-08-19 13:49:00.036 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-08-19 13:49:00.036 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi) in 18.1232ms
+2025-08-19 13:49:00.036 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi)'
+2025-08-19 13:49:00.037 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/CustomerNote/Create - 400 null text/plain; charset=utf-8 22.8199ms
+2025-08-19 14:07:43.510 +03:00 [INF] User profile is available. Using 'C:\Users\nazli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-19 14:07:43.783 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-19 14:07:43.783 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-19 14:07:43.970 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-19 14:07:43.970 +03:00 [INF] Hosting environment: Development
+2025-08-19 14:07:43.971 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-19 14:07:45.710 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-19 14:07:45.914 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 226.6015ms
+2025-08-19 14:07:45.950 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-19 14:07:45.950 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-19 14:07:45.957 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 7.6898ms
+2025-08-19 14:07:46.040 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 90.543ms
+2025-08-19 14:07:46.087 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-19 14:07:46.138 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 52.4621ms
+2025-08-19 14:08:24.649 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/User/Login - application/json 63
+2025-08-19 14:08:24.761 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-19 14:08:24.802 +03:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LoginUser(BankRiskTracking.Entities.DTOs.UserLoginDto) on controller BankRiskTrackingApi.Controllers.UserController (BankRiskTrackingApi).
+2025-08-19 14:08:26.049 +03:00 [WRN] No store type was specified for the decimal property 'TotalDebt' on entity type 'Customer'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-19 14:08:26.049 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-19 14:08:26.253 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 14:08:27.344 +03:00 [INF] Executed DbCommand (91ms) [Parameters=[@__user_Email_0='?' (Size = 4000), @__HashPassword_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[Surname]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__user_Email_0 AND [u].[Password] = @__HashPassword_1
+2025-08-19 14:08:27.423 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1162.8385ms.
+2025-08-19 14:08:27.430 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-19 14:08:27.441 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) in 2635.1309ms
+2025-08-19 14:08:27.441 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-19 14:08:27.452 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/User/Login - 200 null application/json; charset=utf-8 2803.7893ms
+2025-08-19 14:16:24.377 +03:00 [INF] User profile is available. Using 'C:\Users\nazli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-19 14:16:24.690 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-19 14:16:24.691 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-19 14:16:24.812 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-19 14:16:24.813 +03:00 [INF] Hosting environment: Development
+2025-08-19 14:16:24.813 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-19 14:16:26.151 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-19 14:16:26.390 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 250.7552ms
+2025-08-19 14:16:26.415 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-19 14:16:26.416 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-19 14:16:26.433 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 18.0044ms
+2025-08-19 14:16:26.526 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 110.5776ms
+2025-08-19 14:16:26.580 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-19 14:16:26.616 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 37.2893ms
+2025-08-19 14:17:38.138 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/CustomerNote/Create - application/json 229
+2025-08-19 14:17:38.281 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi)'
+2025-08-19 14:17:38.304 +03:00 [INF] Route matched with {action = "Create", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(BankRiskTracking.Entities.DTOs.CustomerNoteCreateDto) on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-19 14:17:39.118 +03:00 [WRN] No store type was specified for the decimal property 'TotalDebt' on entity type 'Customer'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-19 14:17:39.118 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-19 14:17:39.272 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 14:17:40.081 +03:00 [INF] Executed DbCommand (54ms) [Parameters=[@__customerNote_CustomerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Customer] AS [c]
+        WHERE [c].[Id] = @__customerNote_CustomerId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-08-19 14:17:40.299 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 200), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [CustomerNotes] ([CreatedDate], [CustomerId], [Name], [NoteText])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2025-08-19 14:17:40.324 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1049.109ms.
+2025-08-19 14:17:40.329 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[BankRiskTracking.Entities.DTOs.CustomerNoteQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-19 14:17:40.342 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi) in 2034.5233ms
+2025-08-19 14:17:40.342 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi)'
+2025-08-19 14:17:40.350 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/CustomerNote/Create - 200 null application/json; charset=utf-8 2211.9855ms
+2025-08-19 14:17:52.664 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/CustomerNote/ListAll - null null
+2025-08-19 14:17:52.682 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.ListAll (BankRiskTrackingApi)'
+2025-08-19 14:17:52.685 +03:00 [INF] Route matched with {action = "ListAll", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ListAll() on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-19 14:17:52.738 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerNoteController.ListAll (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 14:17:52.782 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedDate], [c].[CustomerId], [c].[Name], [c].[NoteText]
+FROM [CustomerNotes] AS [c]
+2025-08-19 14:17:52.786 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerNoteController.ListAll (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 47.3683ms.
+2025-08-19 14:17:52.786 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[BankRiskTracking.Entities.DTOs.CustomerNoteQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-19 14:17:52.788 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.ListAll (BankRiskTrackingApi) in 102.5672ms
+2025-08-19 14:17:52.788 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.ListAll (BankRiskTrackingApi)'
+2025-08-19 14:17:52.788 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/CustomerNote/ListAll - 200 null application/json; charset=utf-8 125.1771ms
+2025-08-19 14:18:37.380 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/CustomerNote/Create - application/json 221
+2025-08-19 14:18:37.408 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi)'
+2025-08-19 14:18:37.408 +03:00 [INF] Route matched with {action = "Create", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(BankRiskTracking.Entities.DTOs.CustomerNoteCreateDto) on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-19 14:18:37.424 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 14:18:37.458 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__customerNote_CustomerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Customer] AS [c]
+        WHERE [c].[Id] = @__customerNote_CustomerId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-08-19 14:18:37.465 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 200), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [CustomerNotes] ([CreatedDate], [CustomerId], [Name], [NoteText])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2025-08-19 14:18:37.466 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 42.3718ms.
+2025-08-19 14:18:37.467 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[BankRiskTracking.Entities.DTOs.CustomerNoteQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-19 14:18:37.467 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi) in 58.7734ms
+2025-08-19 14:18:37.467 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi)'
+2025-08-19 14:18:37.467 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/CustomerNote/Create - 200 null application/json; charset=utf-8 87.1682ms
+2025-08-19 14:19:26.837 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/CustomerNote/Create - application/json 253
+2025-08-19 14:19:26.860 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi)'
+2025-08-19 14:19:26.863 +03:00 [INF] Route matched with {action = "Create", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(BankRiskTracking.Entities.DTOs.CustomerNoteCreateDto) on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-19 14:19:26.865 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 14:19:26.871 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__customerNote_CustomerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Customer] AS [c]
+        WHERE [c].[Id] = @__customerNote_CustomerId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-08-19 14:19:26.880 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 200), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [CustomerNotes] ([CreatedDate], [CustomerId], [Name], [NoteText])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2025-08-19 14:19:26.881 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 15.1455ms.
+2025-08-19 14:19:26.881 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[BankRiskTracking.Entities.DTOs.CustomerNoteQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-19 14:19:26.881 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi) in 18.1512ms
+2025-08-19 14:19:26.881 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi)'
+2025-08-19 14:19:26.881 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/CustomerNote/Create - 200 null application/json; charset=utf-8 44.948ms
+2025-08-19 14:20:24.011 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/CustomerNote/Create - application/json 218
+2025-08-19 14:20:24.027 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi)'
+2025-08-19 14:20:24.027 +03:00 [INF] Route matched with {action = "Create", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(BankRiskTracking.Entities.DTOs.CustomerNoteCreateDto) on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-19 14:20:24.029 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 14:20:24.041 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__customerNote_CustomerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Customer] AS [c]
+        WHERE [c].[Id] = @__customerNote_CustomerId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-08-19 14:20:24.049 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 200), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [CustomerNotes] ([CreatedDate], [CustomerId], [Name], [NoteText])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2025-08-19 14:20:24.049 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 20.3157ms.
+2025-08-19 14:20:24.050 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[BankRiskTracking.Entities.DTOs.CustomerNoteQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-19 14:20:24.050 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi) in 22.7437ms
+2025-08-19 14:20:24.050 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi)'
+2025-08-19 14:20:24.050 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/CustomerNote/Create - 200 null application/json; charset=utf-8 40.4489ms
+2025-08-19 14:20:59.155 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/CustomerNote/Create - application/json 215
+2025-08-19 14:20:59.157 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi)'
+2025-08-19 14:20:59.164 +03:00 [INF] Route matched with {action = "Create", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(BankRiskTracking.Entities.DTOs.CustomerNoteCreateDto) on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-19 14:20:59.202 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 14:20:59.208 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__customerNote_CustomerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Customer] AS [c]
+        WHERE [c].[Id] = @__customerNote_CustomerId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-08-19 14:20:59.213 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 200), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [CustomerNotes] ([CreatedDate], [CustomerId], [Name], [NoteText])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2025-08-19 14:20:59.214 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 11.5336ms.
+2025-08-19 14:20:59.214 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[BankRiskTracking.Entities.DTOs.CustomerNoteQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-19 14:20:59.214 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi) in 48.9321ms
+2025-08-19 14:20:59.214 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi)'
+2025-08-19 14:20:59.214 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/CustomerNote/Create - 200 null application/json; charset=utf-8 59.8006ms
+2025-08-19 14:21:39.270 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/CustomerNote/Create - application/json 230
+2025-08-19 14:21:39.270 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi)'
+2025-08-19 14:21:39.271 +03:00 [INF] Route matched with {action = "Create", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(BankRiskTracking.Entities.DTOs.CustomerNoteCreateDto) on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-19 14:21:39.290 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 14:21:39.298 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__customerNote_CustomerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Customer] AS [c]
+        WHERE [c].[Id] = @__customerNote_CustomerId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-08-19 14:21:39.330 +03:00 [INF] Executed DbCommand (30ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 200), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [CustomerNotes] ([CreatedDate], [CustomerId], [Name], [NoteText])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2025-08-19 14:21:39.330 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 40.2026ms.
+2025-08-19 14:21:39.330 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[BankRiskTracking.Entities.DTOs.CustomerNoteQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-19 14:21:39.330 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi) in 58.8085ms
+2025-08-19 14:21:39.330 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi)'
+2025-08-19 14:21:39.331 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/CustomerNote/Create - 200 null application/json; charset=utf-8 60.8967ms
+2025-08-19 14:22:46.365 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/CustomerNote/Create - application/json 207
+2025-08-19 14:22:46.365 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi)'
+2025-08-19 14:22:46.366 +03:00 [INF] Route matched with {action = "Create", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(BankRiskTracking.Entities.DTOs.CustomerNoteCreateDto) on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-19 14:22:46.384 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 14:22:46.394 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__customerNote_CustomerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Customer] AS [c]
+        WHERE [c].[Id] = @__customerNote_CustomerId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-08-19 14:22:46.416 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 200), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [CustomerNotes] ([CreatedDate], [CustomerId], [Name], [NoteText])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2025-08-19 14:22:46.417 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 32.842ms.
+2025-08-19 14:22:46.417 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[BankRiskTracking.Entities.DTOs.CustomerNoteQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-19 14:22:46.417 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi) in 51.458ms
+2025-08-19 14:22:46.417 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi)'
+2025-08-19 14:22:46.417 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/CustomerNote/Create - 200 null application/json; charset=utf-8 52.6771ms
+2025-08-19 14:23:00.449 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/CustomerNote/ListAll - null null
+2025-08-19 14:23:00.449 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.ListAll (BankRiskTrackingApi)'
+2025-08-19 14:23:00.450 +03:00 [INF] Route matched with {action = "ListAll", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ListAll() on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-19 14:23:00.451 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerNoteController.ListAll (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 14:23:00.455 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedDate], [c].[CustomerId], [c].[Name], [c].[NoteText]
+FROM [CustomerNotes] AS [c]
+2025-08-19 14:23:00.456 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerNoteController.ListAll (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 5.5414ms.
+2025-08-19 14:23:00.456 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[BankRiskTracking.Entities.DTOs.CustomerNoteQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-19 14:23:00.457 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.ListAll (BankRiskTrackingApi) in 7.0117ms
+2025-08-19 14:23:00.457 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.ListAll (BankRiskTrackingApi)'
+2025-08-19 14:23:00.457 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/CustomerNote/ListAll - 200 null application/json; charset=utf-8 7.718ms
+2025-08-19 14:23:14.763 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/CustomerNote/13 - null null
+2025-08-19 14:23:14.764 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.GetById (BankRiskTrackingApi)'
+2025-08-19 14:23:14.794 +03:00 [INF] Route matched with {action = "GetById", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetById(Int32) on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-19 14:23:14.797 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerNoteController.GetById (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 14:23:14.886 +03:00 [INF] Executed DbCommand (25ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreatedDate], [c].[CustomerId], [c].[Name], [c].[NoteText]
+FROM [CustomerNotes] AS [c]
+WHERE [c].[Id] = @__p_0
+2025-08-19 14:23:14.898 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerNoteController.GetById (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 100.4205ms.
+2025-08-19 14:23:14.898 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-08-19 14:23:14.898 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.GetById (BankRiskTrackingApi) in 103.7018ms
+2025-08-19 14:23:14.898 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.GetById (BankRiskTrackingApi)'
+2025-08-19 14:23:14.898 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/CustomerNote/13 - 404 null text/plain; charset=utf-8 135.9908ms
+2025-08-19 14:28:08.839 +03:00 [INF] User profile is available. Using 'C:\Users\nazli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-19 14:28:09.154 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-19 14:28:09.155 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-19 14:28:09.254 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-19 14:28:09.254 +03:00 [INF] Hosting environment: Development
+2025-08-19 14:28:09.254 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-19 14:28:10.772 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-19 14:28:10.982 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 222.7853ms
+2025-08-19 14:28:11.009 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-19 14:28:11.009 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-19 14:28:11.017 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 8.9457ms
+2025-08-19 14:28:11.081 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 72.0163ms
+2025-08-19 14:28:11.124 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-19 14:28:11.184 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 60.4612ms
+2025-08-19 14:28:59.034 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/User/Login - application/json 63
+2025-08-19 14:28:59.152 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-19 14:28:59.184 +03:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LoginUser(BankRiskTracking.Entities.DTOs.UserLoginDto) on controller BankRiskTrackingApi.Controllers.UserController (BankRiskTrackingApi).
+2025-08-19 14:29:00.139 +03:00 [WRN] No store type was specified for the decimal property 'TotalDebt' on entity type 'Customer'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-19 14:29:00.140 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-19 14:29:00.339 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 14:29:01.392 +03:00 [INF] Executed DbCommand (51ms) [Parameters=[@__user_Email_0='?' (Size = 4000), @__HashPassword_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[Surname]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__user_Email_0 AND [u].[Password] = @__HashPassword_1
+2025-08-19 14:29:01.500 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1155.3715ms.
+2025-08-19 14:29:01.524 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-19 14:29:01.536 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) in 2347.2789ms
+2025-08-19 14:29:01.536 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-19 14:29:01.547 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/User/Login - 200 null application/json; charset=utf-8 2516.0987ms
+2025-08-19 14:29:08.063 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/User/Login - application/json 63
+2025-08-19 14:29:08.070 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-19 14:29:08.071 +03:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LoginUser(BankRiskTracking.Entities.DTOs.UserLoginDto) on controller BankRiskTrackingApi.Controllers.UserController (BankRiskTrackingApi).
+2025-08-19 14:29:08.163 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 14:29:08.172 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Email_0='?' (Size = 4000), @__HashPassword_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[Surname]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__user_Email_0 AND [u].[Password] = @__HashPassword_1
+2025-08-19 14:29:08.173 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 10.4245ms.
+2025-08-19 14:29:08.175 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-19 14:29:08.175 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) in 103.5402ms
+2025-08-19 14:29:08.175 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-19 14:29:08.175 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/User/Login - 200 null application/json; charset=utf-8 113.2225ms
+2025-08-19 14:29:44.780 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/CustomerNote/1 - null null
+2025-08-19 14:29:44.882 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.GetById (BankRiskTrackingApi)'
+2025-08-19 14:29:44.886 +03:00 [INF] Route matched with {action = "GetById", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetById(Int32) on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-19 14:29:44.905 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerNoteController.GetById (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 14:29:45.008 +03:00 [INF] Executed DbCommand (26ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreatedDate], [c].[CustomerId], [c].[Name], [c].[NoteText]
+FROM [CustomerNotes] AS [c]
+WHERE [c].[Id] = @__p_0
+2025-08-19 14:29:45.100 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerNoteController.GetById (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 195.1389ms.
+2025-08-19 14:29:45.101 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[BankRiskTracking.Entities.DTOs.CustomerNoteQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-19 14:29:45.111 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.GetById (BankRiskTrackingApi) in 224.8878ms
+2025-08-19 14:29:45.112 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.GetById (BankRiskTrackingApi)'
+2025-08-19 14:29:45.112 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/CustomerNote/1 - 200 null application/json; charset=utf-8 331.4881ms
+2025-08-19 14:30:16.045 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/CustomerNote/GetByName?name=Emre%20%C5%9Eahin - null null
+2025-08-19 14:30:16.066 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.GetByName (BankRiskTrackingApi)'
+2025-08-19 14:30:16.069 +03:00 [INF] Route matched with {action = "GetByName", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetByName(System.String) on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-19 14:30:16.115 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerNoteController.GetByName (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 14:30:16.347 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerNoteController.GetByName (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 231.8358ms.
+2025-08-19 14:30:16.348 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-08-19 14:30:16.348 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.GetByName (BankRiskTrackingApi) in 279.3305ms
+2025-08-19 14:30:16.349 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.GetByName (BankRiskTrackingApi)'
+2025-08-19 14:30:16.349 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/CustomerNote/GetByName?name=Emre%20%C5%9Eahin - 404 null text/plain; charset=utf-8 304.535ms
+2025-08-19 14:30:30.264 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/CustomerNote/ListAll - null null
+2025-08-19 14:30:30.265 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.ListAll (BankRiskTrackingApi)'
+2025-08-19 14:30:30.266 +03:00 [INF] Route matched with {action = "ListAll", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ListAll() on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-19 14:30:30.287 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerNoteController.ListAll (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 14:30:30.305 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedDate], [c].[CustomerId], [c].[Name], [c].[NoteText]
+FROM [CustomerNotes] AS [c]
+2025-08-19 14:30:30.308 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerNoteController.ListAll (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 20.2951ms.
+2025-08-19 14:30:30.308 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[BankRiskTracking.Entities.DTOs.CustomerNoteQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-19 14:30:30.310 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.ListAll (BankRiskTrackingApi) in 43.909ms
+2025-08-19 14:30:30.310 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.ListAll (BankRiskTrackingApi)'
+2025-08-19 14:30:30.311 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/CustomerNote/ListAll - 200 null application/json; charset=utf-8 47.8386ms
+2025-08-19 14:30:56.168 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/CustomerNote/GetByName?name=Ahmet%20Y%C4%B1lmaz - null null
+2025-08-19 14:30:56.190 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.GetByName (BankRiskTrackingApi)'
+2025-08-19 14:30:56.190 +03:00 [INF] Route matched with {action = "GetByName", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetByName(System.String) on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-19 14:30:56.195 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerNoteController.GetByName (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 14:30:56.232 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerNoteController.GetByName (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 36.3997ms.
+2025-08-19 14:30:56.232 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-08-19 14:30:56.233 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.GetByName (BankRiskTrackingApi) in 38.9148ms
+2025-08-19 14:30:56.233 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.GetByName (BankRiskTrackingApi)'
+2025-08-19 14:30:56.233 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/CustomerNote/GetByName?name=Ahmet%20Y%C4%B1lmaz - 404 null text/plain; charset=utf-8 66.233ms
+2025-08-19 16:09:46.882 +03:00 [INF] User profile is available. Using 'C:\Users\nazli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-19 16:09:47.151 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-19 16:09:47.152 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-19 16:09:47.242 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-19 16:09:47.243 +03:00 [INF] Hosting environment: Development
+2025-08-19 16:09:47.243 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-19 16:09:48.662 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-19 16:09:48.874 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 230.3958ms
+2025-08-19 16:09:48.902 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-19 16:09:48.902 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-19 16:09:48.912 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 10.4861ms
+2025-08-19 16:09:48.978 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 76.335ms
+2025-08-19 16:09:49.012 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-19 16:09:49.028 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.8717ms
+2025-08-19 16:10:25.565 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/User/Login - application/json 63
+2025-08-19 16:10:25.826 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-19 16:10:25.877 +03:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LoginUser(BankRiskTracking.Entities.DTOs.UserLoginDto) on controller BankRiskTrackingApi.Controllers.UserController (BankRiskTrackingApi).
+2025-08-19 16:10:27.005 +03:00 [WRN] No store type was specified for the decimal property 'TotalDebt' on entity type 'Customer'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-19 16:10:27.006 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-19 16:10:27.152 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 16:10:27.969 +03:00 [INF] Executed DbCommand (57ms) [Parameters=[@__user_Email_0='?' (Size = 4000), @__HashPassword_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[Surname]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__user_Email_0 AND [u].[Password] = @__HashPassword_1
+2025-08-19 16:10:28.028 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 872.7108ms.
+2025-08-19 16:10:28.033 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-19 16:10:28.041 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) in 2160.695ms
+2025-08-19 16:10:28.041 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-19 16:10:28.049 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/User/Login - 200 null application/json; charset=utf-8 2484.4362ms
+2025-08-19 16:11:02.794 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/CustomerNote/GetByName?name=Ahmet%20Y%C4%B1lmaz - null null
+2025-08-19 16:11:02.878 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.GetByName (BankRiskTrackingApi)'
+2025-08-19 16:11:02.884 +03:00 [INF] Route matched with {action = "GetByName", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetByName(System.String) on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-19 16:11:02.974 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerNoteController.GetByName (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 16:11:03.076 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@__nn_0_contains='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Name], [c].[CustomerId], [c].[NoteText], [c].[CreatedDate]
+FROM [CustomerNotes] AS [c]
+WHERE LOWER([c].[Name]) LIKE @__nn_0_contains ESCAPE N'\'
+2025-08-19 16:11:03.081 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerNoteController.GetByName (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 106.8432ms.
+2025-08-19 16:11:03.081 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[BankRiskTracking.Entities.DTOs.CustomerNoteQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-19 16:11:03.104 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.GetByName (BankRiskTrackingApi) in 220.4367ms
+2025-08-19 16:11:03.104 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.GetByName (BankRiskTrackingApi)'
+2025-08-19 16:11:03.105 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/CustomerNote/GetByName?name=Ahmet%20Y%C4%B1lmaz - 200 null application/json; charset=utf-8 310.7652ms
+2025-08-19 16:11:56.716 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/CustomerNote/Create - application/json 131
+2025-08-19 16:11:56.721 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi)'
+2025-08-19 16:11:56.723 +03:00 [INF] Route matched with {action = "Create", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(BankRiskTracking.Entities.DTOs.CustomerNoteCreateDto) on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-19 16:11:56.762 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 16:11:56.836 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[@__customerNote_CustomerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Customer] AS [c]
+        WHERE [c].[Id] = @__customerNote_CustomerId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-08-19 16:11:56.842 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 79.8805ms.
+2025-08-19 16:11:56.842 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-08-19 16:11:56.843 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi) in 119.8014ms
+2025-08-19 16:11:56.843 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi)'
+2025-08-19 16:11:56.843 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/CustomerNote/Create - 400 null text/plain; charset=utf-8 127.5049ms
+2025-08-19 16:12:10.860 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/CustomerNote/Create - application/json 132
+2025-08-19 16:12:10.861 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi)'
+2025-08-19 16:12:10.861 +03:00 [INF] Route matched with {action = "Create", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(BankRiskTracking.Entities.DTOs.CustomerNoteCreateDto) on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-19 16:12:10.869 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 16:12:10.885 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__customerNote_CustomerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Customer] AS [c]
+        WHERE [c].[Id] = @__customerNote_CustomerId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-08-19 16:12:10.886 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 16.9606ms.
+2025-08-19 16:12:10.887 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-08-19 16:12:10.888 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi) in 26.0171ms
+2025-08-19 16:12:10.888 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi)'
+2025-08-19 16:12:10.888 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/CustomerNote/Create - 400 null text/plain; charset=utf-8 28.7827ms
+2025-08-19 16:20:59.246 +03:00 [INF] User profile is available. Using 'C:\Users\nazli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-19 16:20:59.504 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-19 16:20:59.504 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-19 16:20:59.575 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-19 16:20:59.575 +03:00 [INF] Hosting environment: Development
+2025-08-19 16:20:59.575 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-19 16:21:00.962 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-19 16:21:01.138 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 188.0439ms
+2025-08-19 16:21:01.159 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-19 16:21:01.159 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-19 16:21:01.168 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 8.2287ms
+2025-08-19 16:21:01.214 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 55.0847ms
+2025-08-19 16:21:01.245 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-19 16:21:01.273 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 28.2977ms
+2025-08-19 16:21:51.275 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/User/Login - application/json 63
+2025-08-19 16:21:51.487 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-19 16:21:51.556 +03:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LoginUser(BankRiskTracking.Entities.DTOs.UserLoginDto) on controller BankRiskTrackingApi.Controllers.UserController (BankRiskTrackingApi).
+2025-08-19 16:21:53.071 +03:00 [WRN] No store type was specified for the decimal property 'TotalDebt' on entity type 'Customer'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-19 16:21:53.071 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-19 16:21:53.345 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 16:21:54.459 +03:00 [INF] Executed DbCommand (52ms) [Parameters=[@__user_Email_0='?' (Size = 4000), @__HashPassword_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[Surname]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__user_Email_0 AND [u].[Password] = @__HashPassword_1
+2025-08-19 16:21:54.506 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1156.3761ms.
+2025-08-19 16:21:54.510 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-19 16:21:54.520 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) in 2957.6239ms
+2025-08-19 16:21:54.520 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-19 16:21:54.531 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/User/Login - 200 null application/json; charset=utf-8 3255.6097ms
+2025-08-19 16:22:47.759 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/CustomerNote/Create - application/json 136
+2025-08-19 16:22:47.823 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi)'
+2025-08-19 16:22:47.826 +03:00 [INF] Route matched with {action = "Create", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(BankRiskTracking.Entities.DTOs.CustomerNoteCreateDto) on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-19 16:22:47.894 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 16:22:47.946 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[@__customerNote_CustomerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Customer] AS [c]
+        WHERE [c].[Id] = @__customerNote_CustomerId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-08-19 16:22:47.947 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 53.4415ms.
+2025-08-19 16:22:47.948 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-08-19 16:22:47.948 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi) in 122.0632ms
+2025-08-19 16:22:47.948 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi)'
+2025-08-19 16:22:47.949 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/CustomerNote/Create - 400 null text/plain; charset=utf-8 189.8764ms
+2025-08-19 16:54:27.890 +03:00 [INF] User profile is available. Using 'C:\Users\nazli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-19 16:54:28.231 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-19 16:54:28.232 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-19 16:54:28.322 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-19 16:54:28.323 +03:00 [INF] Hosting environment: Development
+2025-08-19 16:54:28.323 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-19 16:54:29.356 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-19 16:54:29.535 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 197.0632ms
+2025-08-19 16:54:31.111 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-19 16:54:31.111 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-19 16:54:31.119 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 7.9459ms
+2025-08-19 16:54:31.163 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.2397ms
+2025-08-19 16:54:31.198 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-19 16:54:31.211 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.6739ms
+2025-08-19 16:55:13.212 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/User/Login - application/json 63
+2025-08-19 16:55:13.327 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-19 16:55:13.351 +03:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LoginUser(BankRiskTracking.Entities.DTOs.UserLoginDto) on controller BankRiskTrackingApi.Controllers.UserController (BankRiskTrackingApi).
+2025-08-19 16:55:14.651 +03:00 [WRN] No store type was specified for the decimal property 'TotalDebt' on entity type 'Customer'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-19 16:55:14.652 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-19 16:55:14.873 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 16:55:16.345 +03:00 [INF] Executed DbCommand (65ms) [Parameters=[@__user_Email_0='?' (Size = 4000), @__HashPassword_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[Surname]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__user_Email_0 AND [u].[Password] = @__HashPassword_1
+2025-08-19 16:55:16.448 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1565.5823ms.
+2025-08-19 16:55:16.456 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-19 16:55:16.474 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) in 3117.3279ms
+2025-08-19 16:55:16.474 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-19 16:55:16.495 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/User/Login - 200 null application/json; charset=utf-8 3282.6832ms
+2025-08-19 16:55:58.649 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/CustomerNote/Create - application/json 135
+2025-08-19 16:55:58.738 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi)'
+2025-08-19 16:55:58.742 +03:00 [INF] Route matched with {action = "Create", controller = "CustomerNote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(BankRiskTracking.Entities.DTOs.CustomerNoteCreateDto) on controller BankRiskTrackingApi.Controllers.CustomerNoteController (BankRiskTrackingApi).
+2025-08-19 16:55:58.846 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 16:55:58.918 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__customerNote_CustomerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Customer] AS [c]
+        WHERE [c].[Id] = @__customerNote_CustomerId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-08-19 16:55:58.924 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 77.2094ms.
+2025-08-19 16:55:58.924 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-08-19 16:55:58.925 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi) in 183.2658ms
+2025-08-19 16:55:58.925 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.CustomerNoteController.Create (BankRiskTrackingApi)'
+2025-08-19 16:55:58.926 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/CustomerNote/Create - 400 null text/plain; charset=utf-8 277.2591ms
+2025-08-19 17:22:27.847 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/RiskHistory/Create - application/json 508
+2025-08-19 17:22:27.882 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19.08.2025 13:56:16', Current time (UTC): '19.08.2025 14:22:27'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-19 17:22:27.951 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '19.08.2025 13:56:16', Current time (UTC): '19.08.2025 14:22:27'.
+2025-08-19 17:22:27.951 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.RiskHistoryController.Create (BankRiskTrackingApi)'
+2025-08-19 17:22:27.953 +03:00 [INF] Route matched with {action = "Create", controller = "RiskHistory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(BankRiskTracking.Entities.DTOs.RiskHistroyCreateDto) on controller BankRiskTrackingApi.Controllers.RiskHistoryController (BankRiskTrackingApi).
+2025-08-19 17:22:27.962 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.RiskHistoryController.Create (BankRiskTrackingApi) in 8.9285ms
+2025-08-19 17:22:27.964 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.RiskHistoryController.Create (BankRiskTrackingApi)'
+2025-08-19 17:22:27.969 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'BankRiskTracking.Entities.Interfaces.IRiskHistoryService' while attempting to activate 'BankRiskTrackingApi.Controllers.RiskHistoryController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method27(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-08-19 17:22:27.977 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/RiskHistory/Create - 500 null text/plain; charset=utf-8 130.4272ms
+2025-08-19 17:39:15.274 +03:00 [INF] User profile is available. Using 'C:\Users\nazli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-19 17:39:15.542 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-19 17:39:15.543 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-19 17:39:15.620 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-19 17:39:15.621 +03:00 [INF] Hosting environment: Development
+2025-08-19 17:39:15.621 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-19 17:39:16.810 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-19 17:39:16.994 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 195.3613ms
+2025-08-19 17:39:17.025 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-19 17:39:17.025 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-19 17:39:17.034 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 9.221ms
+2025-08-19 17:39:17.082 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 56.7975ms
+2025-08-19 17:39:17.114 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-19 17:39:17.148 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 35.2943ms
+2025-08-19 17:39:23.429 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/RiskHistory/ListAll - null null
+2025-08-19 17:39:23.612 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.RiskHistoryController.GetAll (BankRiskTrackingApi)'
+2025-08-19 17:39:23.649 +03:00 [INF] Route matched with {action = "GetAll", controller = "RiskHistory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BankRiskTrackingApi.Controllers.RiskHistoryController (BankRiskTrackingApi).
+2025-08-19 17:39:24.929 +03:00 [WRN] No store type was specified for the decimal property 'TotalDebt' on entity type 'Customer'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-19 17:39:24.930 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-19 17:39:25.073 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.RiskHistoryController.GetAll (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 17:39:26.438 +03:00 [INF] Executed DbCommand (51ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[CustomerId], [r].[EvaluatedDate], [r].[Notes], [r].[RiskLevel], [r].[Title]
+FROM [RiskHistories] AS [r]
+2025-08-19 17:39:26.495 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.RiskHistoryController.GetAll (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1414.1656ms.
+2025-08-19 17:39:26.508 +03:00 [INF] Executing OkObjectResult, writing value of type 'BankRiskTracking.Entities.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[BankRiskTracking.Entities.DTOs.RiskHistoryQueryDto, BankRiskTracking.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-19 17:39:26.537 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.RiskHistoryController.GetAll (BankRiskTrackingApi) in 2882.2003ms
+2025-08-19 17:39:26.538 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.RiskHistoryController.GetAll (BankRiskTrackingApi)'
+2025-08-19 17:39:26.563 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/RiskHistory/ListAll - 200 null application/json; charset=utf-8 3134.5093ms
+2025-08-19 17:39:58.134 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/User/Login - application/json 63
+2025-08-19 17:39:58.146 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-19 17:39:58.158 +03:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LoginUser(BankRiskTracking.Entities.DTOs.UserLoginDto) on controller BankRiskTrackingApi.Controllers.UserController (BankRiskTrackingApi).
+2025-08-19 17:39:58.324 +03:00 [INF] Executing action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) - Validation state: "Valid"
+2025-08-19 17:39:58.518 +03:00 [INF] Executed DbCommand (34ms) [Parameters=[@__user_Email_0='?' (Size = 4000), @__HashPassword_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[Surname]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__user_Email_0 AND [u].[Password] = @__HashPassword_1
+2025-08-19 17:39:58.574 +03:00 [INF] Executed action method BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 249.0377ms.
+2025-08-19 17:39:58.575 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-19 17:39:58.583 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi) in 423.9656ms
+2025-08-19 17:39:58.583 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.UserController.LoginUser (BankRiskTrackingApi)'
+2025-08-19 17:39:58.583 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/User/Login - 200 null application/json; charset=utf-8 449.7098ms
+2025-08-19 17:40:42.039 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/RiskHistory/Create - application/json 391
+2025-08-19 17:40:42.121 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.RiskHistoryController.Create (BankRiskTrackingApi)'
+2025-08-19 17:40:42.123 +03:00 [INF] Route matched with {action = "Create", controller = "RiskHistory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(BankRiskTracking.Entities.DTOs.RiskHistroyCreateDto) on controller BankRiskTrackingApi.Controllers.RiskHistoryController (BankRiskTrackingApi).
+2025-08-19 17:40:42.172 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-08-19 17:40:42.202 +03:00 [INF] Executed action BankRiskTrackingApi.Controllers.RiskHistoryController.Create (BankRiskTrackingApi) in 79.2923ms
+2025-08-19 17:40:42.202 +03:00 [INF] Executed endpoint 'BankRiskTrackingApi.Controllers.RiskHistoryController.Create (BankRiskTrackingApi)'
+2025-08-19 17:40:42.203 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/RiskHistory/Create - 400 null application/problem+json; charset=utf-8 164.7914ms

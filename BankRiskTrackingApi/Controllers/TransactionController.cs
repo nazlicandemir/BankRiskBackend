@@ -66,5 +66,34 @@ namespace BankRiskTrackingApi.Controllers
             }
             return Ok(result);
         }
+
+       
+        [HttpGet("GetTransactionByCustomerId")]
+
+        public IActionResult GetTransactionByCustomerId (int CustomerId)
+        {
+            var result = _transaction.GetTransactionByCustomerId(CustomerId);
+            if (!result.IsSuccess)
+            {
+                return NotFound("İşlem Bulunamadı");
+            }
+            return Ok(result);
+        }
+        [HttpPut("Update")]
+        public IActionResult Update([FromBody] TransactionUpdateDto transactionUpdateDto)
+        {
+            if (transactionUpdateDto == null)
+            {
+                return BadRequest("Müşteri bilgileri boş olamaz");
+            }
+            var result = _transaction.Update(transactionUpdateDto);
+            if (!result.IsSuccess)
+            {
+                return BadRequest("Müşteri güncellenemedi");
+            }
+            return Ok(result); 
+        }
+
+
     }
 }

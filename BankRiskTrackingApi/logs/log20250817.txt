@@ -1,0 +1,20 @@
+2025-08-17 22:37:18.013 +03:00 [INF] User profile is available. Using 'C:\Users\nazli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-17 22:37:22.008 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-17 22:37:22.013 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-17 22:37:22.077 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-17 22:37:22.082 +03:00 [INF] Hosting environment: Development
+2025-08-17 22:37:22.083 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-17 22:38:24.094 +03:00 [INF] User profile is available. Using 'C:\Users\nazli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-17 22:38:25.433 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-17 22:38:25.438 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-17 22:38:25.454 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-17 22:38:25.458 +03:00 [INF] Hosting environment: Development
+2025-08-17 22:38:25.458 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-17 22:38:33.258 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-17 22:38:35.201 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 1990.04ms
+2025-08-17 22:38:35.459 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-17 22:38:35.459 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-17 22:38:35.496 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 41.224ms
+2025-08-17 22:38:36.150 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 690.895ms
+2025-08-17 22:38:36.259 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-17 22:38:36.841 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 583.8976ms

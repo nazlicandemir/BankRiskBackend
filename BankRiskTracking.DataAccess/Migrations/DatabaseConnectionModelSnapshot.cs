@@ -47,15 +47,47 @@ namespace BankRiskTracking.DataAccess.Migrations
                     b.Property<string>("Notes")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("RiskLevel")
+                        .HasColumnType("int");
+
                     b.Property<decimal>("TotalDebt")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int>("riskLevel")
+                    b.HasKey("Id");
+
+                    b.ToTable("Customer", (string)null);
+                });
+
+            modelBuilder.Entity("BankRiskTracking.Entities.Entities.CustomerNote", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("SYSUTCDATETIME()");
+
+                    b.Property<int>("CustomerId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("NoteText")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Customer");
+                    b.HasIndex("CustomerId");
+
+                    b.ToTable("CustomerNotes", (string)null);
                 });
 
             modelBuilder.Entity("BankRiskTracking.Entities.Entities.RiskHistory", b =>
@@ -69,9 +101,6 @@ namespace BankRiskTracking.DataAccess.Migrations
                     b.Property<int>("CustomerId")
                         .HasColumnType("int");
 
-                    b.Property<int>("CustomerIdi")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("EvaluatedDate")
                         .HasColumnType("datetime2");
 
@@ -81,11 +110,15 @@ namespace BankRiskTracking.DataAccess.Migrations
                     b.Property<int>("RiskLevel")
                         .HasColumnType("int");
 
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CustomerId");
 
-                    b.ToTable("RiskHistories");
+                    b.ToTable("RiskHistories", (string)null);
                 });
 
             modelBuilder.Entity("BankRiskTracking.Entities.Entities.Transaction", b =>
@@ -105,6 +138,10 @@ namespace BankRiskTracking.DataAccess.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("TrancationType")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -116,7 +153,47 @@ namespace BankRiskTracking.DataAccess.Migrations
 
                     b.HasIndex("CustomerId");
 
-                    b.ToTable("TransactionHistories");
+                    b.ToTable("TransactionHistories", (string)null);
+                });
+
+            modelBuilder.Entity("BankRiskTracking.Entities.Entities.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Surname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users", (string)null);
+                });
+
+            modelBuilder.Entity("BankRiskTracking.Entities.Entities.CustomerNote", b =>
+                {
+                    b.HasOne("BankRiskTracking.Entities.Entities.Customer", "Customer")
+                        .WithMany()
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Customer");
                 });
 
             modelBuilder.Entity("BankRiskTracking.Entities.Entities.RiskHistory", b =>

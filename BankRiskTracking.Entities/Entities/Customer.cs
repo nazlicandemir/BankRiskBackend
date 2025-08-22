@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BankRiskTracking.Entities.Entities
+﻿namespace BankRiskTracking.Entities.Entities
 {
     public enum RiskLevel
     {
@@ -23,7 +17,7 @@ namespace BankRiskTracking.Entities.Entities
         public decimal TotalDebt {  get; set; }
         public int CreditScore {  get; set; }
 
-        public RiskLevel riskLevel { get; set; }
+        public RiskLevel RiskLevel { get; set; }
 
         public string? Notes {  get; set; }
 

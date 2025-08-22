@@ -1,26 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BankRiskTracking.DataAccess.Repository
+﻿namespace BankRiskTracking.DataAccess.Repository
 {
-   public interface IGenericRepository<TEntity>where TEntity : class
+    public interface IGenericRepository<TEntity> where TEntity : class
     {
         #region CRUD
-        void Create (TEntity entity);
+        void Create(TEntity entity);
         IQueryable<TEntity> GetAll();
 
-        public Task AddAsync(TEntity entity);
-        void UpdateAsync(TEntity entity);
+        Task AddAsync(TEntity entity);
+        Task UpdateAsync(TEntity entity);   // <-- void yerine Task
+        void Update(TEntity entity);        // <-- Senkron sürümü de kalsın (istersen)
         void Delete(TEntity entity);
-
-        #endregion
-
-        Task<TEntity> GetByIdAsync(int id);
+       
 
         void DeleteRange(List<TEntity> entities);
+        #endregion
+
+        Task<TEntity?> GetByIdAsync(int id); // <-- FindAsync null dönebilir
+
         IQueryable<TEntity> Queryable();
+
+        int SaveChange();
     }
 }

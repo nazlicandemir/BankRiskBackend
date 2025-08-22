@@ -1,0 +1,90 @@
+2025-08-13 15:52:17.068 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-13 15:52:17.683 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-13 15:52:17.685 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-13 15:52:17.685 +03:00 [INF] Hosting environment: Development
+2025-08-13 15:52:17.685 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-13 15:52:19.041 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-13 15:52:19.415 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 390.0533ms
+2025-08-13 15:52:19.445 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-13 15:52:19.445 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-13 15:52:19.452 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 7.2854ms
+2025-08-13 15:52:19.496 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 51.1717ms
+2025-08-13 15:52:19.534 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-13 15:52:19.661 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 127.9827ms
+2025-08-13 15:53:12.406 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-13 15:53:12.433 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-13 15:53:12.435 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-13 15:53:12.436 +03:00 [INF] Hosting environment: Development
+2025-08-13 15:53:12.436 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-13 15:53:13.569 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-13 15:53:13.766 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 208.6272ms
+2025-08-13 15:53:13.792 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-13 15:53:13.792 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-13 15:53:13.804 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 12.8813ms
+2025-08-13 15:53:13.855 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 63.4264ms
+2025-08-13 15:53:13.894 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-13 15:53:14.002 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 107.8346ms
+2025-08-13 15:54:56.921 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/User/Create - application/json 121
+2025-08-13 15:54:56.949 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.UserController.CreateUser (BankRiskTrackingApi)'
+2025-08-13 15:54:57.037 +03:00 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateUser(BankRiskTracking.Entities.DTOs.UserCreateDto) on controller BankRiskTrackingApi.Controllers.UserController (BankRiskTrackingApi).
+2025-08-13 16:01:22.968 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-13 16:01:22.988 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-13 16:01:22.989 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-13 16:01:22.990 +03:00 [INF] Hosting environment: Development
+2025-08-13 16:01:22.990 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-13 16:01:24.407 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-13 16:01:24.601 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 204.7218ms
+2025-08-13 16:01:24.625 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-13 16:01:24.625 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-13 16:01:24.639 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 15.042ms
+2025-08-13 16:01:24.677 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.3135ms
+2025-08-13 16:01:24.715 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-13 16:01:24.861 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 145.5233ms
+2025-08-13 16:02:11.303 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/User/Create - application/json 121
+2025-08-13 16:02:11.328 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.UserController.CreateUser (BankRiskTrackingApi)'
+2025-08-13 16:02:11.388 +03:00 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateUser(BankRiskTracking.Entities.DTOs.UserCreateDto) on controller BankRiskTrackingApi.Controllers.UserController (BankRiskTrackingApi).
+2025-08-13 16:05:01.102 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-13 16:05:01.123 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-13 16:05:01.126 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-13 16:05:01.126 +03:00 [INF] Hosting environment: Development
+2025-08-13 16:05:01.126 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-13 16:05:02.179 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-13 16:05:02.420 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 254.0572ms
+2025-08-13 16:05:02.444 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-13 16:05:02.444 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-13 16:05:02.450 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 6.7782ms
+2025-08-13 16:05:02.514 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 70.1267ms
+2025-08-13 16:05:02.556 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-13 16:05:02.720 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 164.5151ms
+2025-08-13 16:05:15.786 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/User/Create - application/json 103
+2025-08-13 16:05:15.814 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.UserController.CreateUser (BankRiskTrackingApi)'
+2025-08-13 16:05:15.883 +03:00 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateUser(BankRiskTracking.Entities.DTOs.UserCreateDto) on controller BankRiskTrackingApi.Controllers.UserController (BankRiskTrackingApi).
+2025-08-13 16:06:14.822 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-13 16:06:14.856 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-13 16:06:14.858 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-13 16:06:14.859 +03:00 [INF] Hosting environment: Development
+2025-08-13 16:06:14.859 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-13 16:06:15.764 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-13 16:06:16.037 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 285.1035ms
+2025-08-13 16:06:16.079 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-13 16:06:16.079 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-13 16:06:16.085 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 6.0155ms
+2025-08-13 16:06:16.118 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.0094ms
+2025-08-13 16:06:16.150 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-13 16:06:16.277 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 127.4215ms
+2025-08-13 16:06:25.410 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/User/Create - application/json 101
+2025-08-13 16:06:25.437 +03:00 [INF] Executing endpoint 'BankRiskTrackingApi.Controllers.UserController.CreateUser (BankRiskTrackingApi)'
+2025-08-13 16:06:25.543 +03:00 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateUser(BankRiskTracking.Entities.DTOs.UserCreateDto) on controller BankRiskTrackingApi.Controllers.UserController (BankRiskTrackingApi).
+2025-08-13 17:55:37.520 +03:00 [INF] Now listening on: https://localhost:7210
+2025-08-13 17:55:37.565 +03:00 [INF] Now listening on: http://localhost:5007
+2025-08-13 17:55:37.568 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-13 17:55:37.569 +03:00 [INF] Hosting environment: Development
+2025-08-13 17:55:37.569 +03:00 [INF] Content root path: C:\Users\nazli\source\repos\BackendBanking\BankRiskTrackingApi
+2025-08-13 17:55:41.622 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-08-13 17:55:42.058 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 450.6627ms
+2025-08-13 17:55:42.096 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-13 17:55:42.096 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-08-13 17:55:42.109 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 13.3358ms
+2025-08-13 17:55:42.494 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 398.3467ms
+2025-08-13 17:55:42.536 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-08-13 17:55:42.707 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 170.6685ms

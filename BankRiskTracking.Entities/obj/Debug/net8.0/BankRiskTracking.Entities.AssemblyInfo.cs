@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BankRiskTracking.Entities")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0b6324cca5dd79659dbf0e7a9a6648654016168")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0313e2336d08340208cb5789bc1990b48d94d461")]
 [assembly: System.Reflection.AssemblyProductAttribute("BankRiskTracking.Entities")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BankRiskTracking.Entities")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
